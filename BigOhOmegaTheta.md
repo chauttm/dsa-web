@@ -3,7 +3,7 @@
 ## Theta
 **Θ** (Theta) là ký hiệu chỉ **tốc độ tăng** (order of growth / rate of growth) của thời gian chạy, hay còn gọi là **cận chặt** (tight bound).
 Với hàm `g(n)` cho trước, ta ký hiệu `Θ(g(n))` là tập hợp các hàm `f(n)` thỏa mãn điều kiện: tồn tại các hằng số dương `n₀` ,`c₁`, `c₂` sao cho `c₁g(n) <= f(n) <= c₂g(n)`với mọi  `n >= n₀`.
-Ví dụ, các hàm có dạng `f(n) = an^2 + bn + c`, với `a`, `b`, `c` là các hằng số nào đó, đều thuộc tập hợp `Θ(g(n))`.
+Ví dụ, các hàm có dạng $`f(n) = an^2 + bn + c`$, với `a`, `b`, `c` là các hằng số nào đó, đều thuộc tập hợp `Θ(g(n))`.
 Ta viết `f(n) ∈ Θ(g(n))`, hoặc viết là `f(n) = Θ(g(n))` cũng chấp nhận được và tiện lợi trong một số trường hợp.
 
 
