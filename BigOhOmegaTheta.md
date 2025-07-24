@@ -18,7 +18,7 @@ Ví dụ:
     - thời gian chạy trong trường hợp trung bình là $Θ(n^2)$ - average-case running time of $Θ(n^2)$
 
 ## Big-Oh và Omega
-**$Θ$** mô tả cả cận trên và cận dưới của một hàm, cho ta giới hạn chặt chẽ về hàm đó. Nhưng khi ta chỉ có được **cận trên** của hàm, ta dùng ký hiệu **$Ο$** (Big O - Ô lớn). Hoặc khi ta chỉ muốn nói về **cận dưới** của hàm, ta dùng ký hiệu **$Ω$** (Omega). 
+**$Θ$** mô tả cả cận trên và cận dưới của một hàm, cho ta giới hạn chặt chẽ về hàm đó. Nhưng khi ta chỉ có được **cận trên** của hàm, ta dùng ký hiệu **$Ο$** (Big O - Ô lớn). Hoặc khi ta chỉ muốn nói về **cận dưới** của hàm, ta dùng ký hiệu **$Ω$** (Omega). Định nghĩa như sau:
 
 Với hàm $g(n)$ cho trước, 
 - $Ω(g(n))$ là tập hợp các hàm $f(n)$ thỏa mãn điều kiện: tồn tại các hằng số dương $n_0$ và $c$ sao cho $f(n) >= cg(n)$ với mọi  $n >= n_0$.
@@ -46,8 +46,11 @@ Nhiều người nói/viết theo kiểu "Thời gian chạy của insertion sor
 Phát biểu đó tương đương với "Thời gian chạy trong trường hợp xấu nhất của insertion sort là $Θ(n^2)$".
 Tương tự, khi có người nói "thời gian chạy của insertion sort là $Ω(n)$", ý của họ thực ra là "với bất kể input nào với kích thước $n$, thời gian chạy của insertion sort cho input đó không ít hơn $n$ nhân với một hằng số, với $n$ đủ lớn". Phát biểu này tương đương với "Thời gian chạy trong trường hợp tốt nhất của insertion sort là $Ω(n)$".
 
-Theo [[1]](#1), về kỹ thuật, cách nói trên là lạm dụng. Thực tế là nó gây ra rất nhiều hiểu lầm. Tuy nhiên, đây lại là cách nói rất thông dụng.
+Theo Cormen [[1]](#1), về kỹ thuật, cách nói trên là lạm dụng. Tuy nhiên, đây lại là cách nói rất thông dụng, và thực tế là nó gây ra rất nhiều hiểu lầm. 
+Sedgewick thiên về cách giá xấp xỉ kèm theo cost model, ví dụ "ThreeSum uses $~n^3/2$ array accesses in the worst case", bởi vì cách này tuy dài dòng hơn chút nhưng lai nhiều thông tin hơn là "The running time of ThreeSum is $O(n^3)$" [[2]](#2)
 
 ## Tài liệu tham khảo
 <a id="1">[1]</a>
-Cornel et al., Introduction to Algorithms, 3rd ed., The MIT Press, 48-49
+Cormen et al., Introduction to Algorithms, 3rd ed., The MIT Press, 48-49
+<a id="1">[1]</a>
+Robert Sedgewick and Kevin Wayne, Algorithms, 4th ed., Addison-Wesley, 207
