@@ -1,7 +1,7 @@
 # Ký hiệu Big O, Omega và Theta
 
 ## Theta
-**Θ** (Theta) là ký hiệu chỉ **tốc độ tăng** (order of growth / rate of growth) của thời gian chạy, hay còn gọi là **cận chặt** (tight bound).
+**$Θ$** (Theta) là ký hiệu chỉ **tốc độ tăng** (order of growth / rate of growth) của thời gian chạy, hay còn gọi là **cận chặt** (tight bound).
 Với hàm $g(n)$ cho trước, ta ký hiệu $Θ(g(n))$ là tập hợp các hàm $f(n)$ thỏa mãn điều kiện: tồn tại các hằng số dương $n_0$ ,$c_1$, $c_2$ sao cho $c_1g(n) <= f(n) <= c_2g(n)$với mọi  $n >= n_0$.
 Ví dụ, các hàm có dạng $f(n) = an^2 + bn + c$, với $a$, $b$, $c$ là các hằng số nào đó, đều thuộc tập hợp $Θ(g(n))$.
 Ta viết $f(n) ∈ Θ(g(n))$, hoặc viết là $f(n) = Θ(g(n))$ cũng chấp nhận được và tiện lợi trong một số trường hợp.
@@ -18,7 +18,7 @@ Ví dụ:
     - thời gian chạy trong trường hợp trung bình là $Θ(n^2)$ - average-case running time of $Θ(n^2)$
 
 ## Big-Oh và Omega
-**Θ** mô tả cả cận trên và cận dưới của một hàm, cho ta giới hạn chặt chẽ về hàm đó. Nhưng khi ta chỉ có được **cận trên** của hàm, ta dùng ký hiệu **Ο**. Hoặc khi ta chỉ muốn nói về **cận dưới** của hàm, ta dùng ký hiệu **Ω**. 
+**$Θ$** mô tả cả cận trên và cận dưới của một hàm, cho ta giới hạn chặt chẽ về hàm đó. Nhưng khi ta chỉ có được **cận trên** của hàm, ta dùng ký hiệu **$Ο$** (Big O - Ô lớn). Hoặc khi ta chỉ muốn nói về **cận dưới** của hàm, ta dùng ký hiệu **$Ω$** (Omega). 
 
 Với hàm $g(n)$ cho trước, 
 - $Ω(g(n))$ là tập hợp các hàm $f(n)$ thỏa mãn điều kiện: tồn tại các hằng số dương $n_0$ và $c$ sao cho $f(n) >= cg(n)$ với mọi  $n >= n_0$.
