@@ -78,6 +78,7 @@ Như thường lệ trong các biểu thức như vậy, các số hạng sau s�
 Ta viết $~ f(N)$ để đại diện cho tất cả các hàm mà khi chia cho f(N) được kết quả có giới hạn là 1 khi N tiến đến vô cùng. Ta viết $g(N) ~ f(N)$ để hàm ý rằng $g(N) / f(N)$ tiến đến 1 khi N tăng.
 
 ![tilde](https://algs4.cs.princeton.edu/14analysis/images/tilde.png "tilde")
+
 *Ví dụ về xấp xỉ*
 
 Ví dụ, chúng ta sử dụng xấp xỉ $~N^3/6$ để mô tả số lần lệnh if trong ThreeSum được thực thi, vì $N^3/6 - N^2/2 + N/3$ chia cho $N^3/6$ tiến đến 1 khi N lớn. Thường xuyên nhất, chúng ta làm việc với các xấp xỉ có dạng
@@ -135,7 +136,8 @@ Do đó, mô hình này hỗ trợ giả thuyết của chúng ta từ Mục 1.1
 ### Phân loại theo bậc tăng (order of growth classification)
 Chúng ta chỉ sử dụng một vài thành phần gốc (câu lệnh, điều kiện, vòng lặp, lồng nhau và các lời gọi phương thức) để cài thuật toán, vì vậy rất thường xuyên, bậc tăng trưởng của chi phí là một trong số ít các hàm của kích thước bài toán N. Các hàm này được tóm tắt trong bảng dưới đây, cùng với các tên gọi của chúng, mã điển hình dẫn đến mỗi hàm, và các ví dụ.
 
-![classifications](https://algs4.cs.princeton.edu/14analysis/images/classifications.png "classifications") 
+![classifications](https://algs4.cs.princeton.edu/14analysis/images/classifications.png "classifications")
+
 *Các phân loại bậc tăng điển hình*
 
 ***Hằng số (Constant).*** Một chương trình có bậc tăng trưởng thời gian chạy *hằng số* thực thi một số lượng thao tác cố định để hoàn thành công việc; do đó thời gian chạy của nó không phụ thuộc vào N. Hầu hết các thao tác trong Java mất thời gian hằng số.

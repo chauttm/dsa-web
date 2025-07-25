@@ -1,0 +1,761 @@
+### 50 câu hỏi trắc nghiệm về phân tích thuật toán và ký hiệu dấu ngã
+
+1. Ký hiệu dấu ngã (~) được sử dụng để làm gì trong phân tích thuật toán?
+a) Mô tả cận trên tiệm cận của thời gian chạy.
+*b) Giúp đơn giản hóa các công thức toán học bằng cách bỏ qua các số hạng bậc thấp không đáng kể.
+c) Cung cấp một cận dưới cho hiệu suất trường hợp xấu nhất.
+d) Định nghĩa một mô hình chi phí cho một thuật toán.
+
+2. Theo định nghĩa chính thức, hai hàm f(N) và g(N) được gọi là xấp xỉ dấu ngã, ký hiệu là f(N) ~ g(N), nếu:
+a) f(N) và g(N) có cùng bậc tăng trưởng.
+*b) lim(N→∞) f(N)/g(N) = 1.
+c) f(N) là O(g(N)).
+d) Tồn tại một hằng số c sao cho f(N) < c * g(N) với mọi N đủ lớn.
+
+3. Trong phân tích thời gian chạy của chương trình ThreeSum, biểu thức N(N-1)(N-2)/6 mô tả số lần câu lệnh `if` được thực thi. Xấp xỉ dấu ngã của biểu thức này là gì?
+a) ~N^3/2
+*b) ~N^3/6
+c) ~N^3
+d) ~N^2
+
+4. Khi sử dụng ký hiệu dấu ngã, tại sao cơ số của lôgarit (ví dụ: log N) thường không được chỉ định?
+a) Vì nó không ảnh hưởng đến bậc tăng trưởng.
+*b) Vì hằng số `a` trong xấp xỉ có thể hấp thụ chi tiết đó.
+c) Vì chỉ có lôgarit tự nhiên (ln N) được sử dụng.
+d) Vì Big-Oh không quan tâm đến cơ số lôgarit.
+
+5. Điểm khác biệt chính giữa ký hiệu dấu ngã (~) và ký hiệu Big-Oh (O) là gì?
+a) Ký hiệu dấu ngã chỉ mô tả một cận trên, trong khi Big-Oh mô tả một cận dưới.
+*b) Ký hiệu dấu ngã chính xác hơn cho việc dự đoán hiệu suất, trong khi Big-Oh chủ yếu cung cấp cận trên.
+c) Ký hiệu dấu ngã chỉ được sử dụng cho các thuật toán tuyến tính, trong khi Big-Oh được sử dụng cho tất cả các loại thuật toán.
+d) Ký hiệu dấu ngã bỏ qua các số hạng bậc thấp, trong khi Big-Oh không làm vậy.
+
+6. Một chương trình có thời gian chạy là T(N) = 5N^2 + 100N + 50. Xấp xỉ dấu ngã của T(N) là gì?
+a) ~100N
+b) ~50
+*c) ~5N^2
+d) ~N^2
+
+7. Theo văn bản đã dịch, bậc tăng trưởng của thời gian chạy của ThreeSum là gì?
+a) N^2
+b) N log N
+*c) N^3
+d) log N
+
+8. Một biểu đồ log-log của thời gian chạy so với kích thước bài toán cho một thuật toán sẽ tạo ra một đường thẳng có độ dốc `b` nếu thời gian chạy của nó có thể được mô tả bằng một luật lũy thừa có dạng nào?
+*a) T(N) = a * N^b
+b) T(N) = a * b^N
+c) T(N) = a * N * log N
+d) T(N) = a * N
+
+9. Theo định nghĩa, đâu là "bậc tăng trưởng" của g(N) ~ a*f(N) với f(N) = N^b * (log N)^c?
+a) `a`
+b) `b`
+c) `c`
+*d) `f(N)`
+
+10. Khi phân tích một chương trình, việc xác định vòng lặp bên trong (inner loop) rất quan trọng vì:
+a) Nó xác định chi phí của tất cả các câu lệnh trong chương trình.
+b) Nó là nơi xảy ra các lỗi lập trình phổ biến nhất.
+*c) Các câu lệnh trong vòng lặp này được thực thi thường xuyên nhất và chi phối tổng thời gian chạy.
+d) Nó luôn chứa các câu lệnh `if`.
+
+11. Tác giả đã mô tả mô hình toán học của thời gian chạy chương trình là gì?
+a) Phụ thuộc vào việc sử dụng các ngôn ngữ lập trình khác nhau.
+*b) Là tổng của (chi phí thực thi mỗi câu lệnh) nhân với (tần suất thực thi mỗi câu lệnh).
+c) Hoàn toàn không thể xây dựng được.
+d) Chỉ liên quan đến việc đếm số lần gọi phương thức.
+
+12. Theo văn bản, thuật ngữ "thuộc tính" (property) được sử dụng để chỉ điều gì?
+a) Một chân lý toán học.
+*b) Một giả thuyết cần được xác thực bằng thực nghiệm.
+c) Một kết quả cuối cùng của phân tích lý thuyết.
+d) Một mô hình chi phí của thuật toán.
+
+13. Các thuật toán có bậc tăng trưởng N^2 thường có cấu trúc nào?
+a) Một vòng lặp `for` đơn.
+*b) Hai vòng lặp `for` lồng nhau.
+c) Ba vòng lặp `for` lồng nhau.
+d) Sử dụng tìm kiếm nhị phân.
+
+14. Bậc tăng trưởng của thời gian chạy của thuật toán tìm kiếm nhị phân (binary search) là gì?
+a) Tuyến tính.
+*b) Lôgarit.
+c) Tuyệt đối tuyến tính.
+d) Bậc hai.
+
+15. Mối quan hệ giữa thời gian chạy trên các máy tính khác nhau đối với cùng một thuật toán được văn bản giả thuyết như thế nào?
+*a) Tỷ lệ với một hằng số.
+b) Hoàn toàn không liên quan.
+c) Tăng gấp đôi nếu máy tính nhanh gấp đôi.
+d) Tỷ lệ nghịch với tốc độ của máy tính.
+
+16. Theo văn bản, thuật toán nào được coi là một nguyên mẫu (prototype) của bậc tăng trưởng bậc ba (cubic)?
+a) Mergesort
+b) Insertion sort
+c) BinarySearch
+*d) ThreeSum
+
+17. Việc phân tích bậc tăng trưởng cho phép chúng ta tách biệt chương trình khỏi...
+*a) Thuật toán mà nó triển khai.
+b) Hệ điều hành của máy tính.
+c) Các lỗi lập trình.
+d) Dữ liệu đầu vào cụ thể.
+
+18. Thuật ngữ "mô hình chi phí" (cost model) được định nghĩa là gì?
+*a) Định nghĩa các thao tác cơ bản được sử dụng bởi thuật toán để giải quyết vấn đề.
+b) Chi phí tiền bạc để chạy một chương trình.
+c) Số lượng các câu lệnh trong một chương trình.
+d) Tổng thời gian chạy của một chương trình.
+
+19. Theo văn bản, thuật ngữ "mệnh đề" (proposition) được sử dụng để chỉ điều gì?
+a) Một giả thuyết cần được xác thực bằng thực nghiệm.
+*b) Một sự thật toán học về thuật toán theo một mô hình chi phí.
+c) Một lỗi phổ biến trong phân tích thuật toán.
+d) Kết quả của một thử nghiệm chạy chương trình.
+
+20. Một chương trình có thời gian chạy là T(N) = a*N^2 sẽ có tỷ lệ thời gian chạy khi kích thước bài toán N tăng gấp đôi là gì?
+a) T(2N)/T(N) ≈ 2
+*b) T(2N)/T(N) ≈ 4
+c) T(2N)/T(N) ≈ 8
+d) T(2N)/T(N) ≈ 1
+
+21. Ký hiệu Big-Omega (Ω) được sử dụng để mô tả điều gì?
+*a) Một cận dưới về trường hợp xấu nhất.
+b) Một cận trên tiệm cận.
+c) Một xấp xỉ chính xác của thời gian chạy.
+d) Một sự cân bằng giữa cận trên và cận dưới.
+
+22. Ký hiệu Big-Theta (Θ) được sử dụng để mô tả điều gì?
+a) Một cận trên tiệm cận.
+b) Một cận dưới về trường hợp xấu nhất.
+*c) Hiệu suất của thuật toán tối ưu.
+d) Một thuật toán có thời gian chạy hằng số.
+
+23. Khẳng định nào sau đây là đúng về các thuật toán có thời gian chạy là "tuyệt đối tuyến tính" (linearithmic)?
+a) Thời gian chạy của chúng tỷ lệ thuận với N.
+b) Chúng có hai vòng lặp `for` lồng nhau.
+*c) Thời gian chạy của chúng có bậc tăng trưởng N log N.
+d) Chúng rất chậm và không khả thi.
+
+24. Theo văn bản, các thuật toán bậc hai và bậc ba không khả thi cho các bài toán lớn vì:
+a) Chúng tiêu tốn quá nhiều bộ nhớ.
+b) Chúng quá phức tạp để triển khai.
+*c) Thời gian chạy của chúng tăng quá nhanh theo kích thước bài toán.
+d) Các ngôn ngữ lập trình hiện đại không hỗ trợ chúng.
+
+25. Vòng lặp bên trong của chương trình ThreeSum là gì?
+*a) Các câu lệnh tăng `k`, kiểm tra điều kiện vòng lặp, và kiểm tra tổng ba số.
+b) Câu lệnh khởi tạo `cnt` = 0.
+c) Toàn bộ chương trình.
+d) Vòng lặp ngoài cùng `for (int i = 0; i < N; i++)`.
+
+26. Phân tích xác suất được sử dụng để xác định điều gì trong ví dụ DoublingTest?
+*a) Giá trị kỳ vọng của số lần `cnt++` được thực thi.
+b) Kích thước của mảng đầu vào.
+c) Thời gian chạy tối đa.
+d) Chi phí của mỗi câu lệnh.
+
+27. Theo văn bản, một chương trình có bậc tăng trưởng thời gian chạy là "hằng số" (constant) có nghĩa là gì?
+a) Thời gian chạy của nó tỷ lệ thuận với N.
+b) Thời gian chạy của nó không thay đổi.
+*c) Nó thực thi một số lượng thao tác cố định.
+d) Thời gian chạy của nó phụ thuộc vào đầu vào.
+
+28. Theo Knuth, tổng thời gian chạy của một chương trình được xác định bởi những yếu tố nào?
+a) Kích thước đầu vào và loại dữ liệu.
+b) Ngôn ngữ lập trình và hệ điều hành.
+*c) Chi phí thực hiện mỗi câu lệnh và tần suất thực hiện mỗi câu lệnh.
+d) Kích thước bộ nhớ và tốc độ CPU.
+
+29. Theo văn bản, điều gì có thể xảy ra khi chạy DoublingTest và các tỷ lệ không nhất quán?
+a) Chương trình có lỗi.
+*b) Hệ điều hành của máy tính đã làm việc khác trong quá trình thí nghiệm.
+c) Dữ liệu đầu vào không đủ lớn.
+d) Máy tính quá nhanh.
+
+30. Theo văn bản, để giải quyết vấn đề về các tỷ lệ không nhất quán khi chạy DoublingTest, người ta có thể làm gì?
+a) Viết lại chương trình.
+b) Sử dụng một máy tính khác.
+*c) Chạy các thí nghiệm nhiều lần hơn cho mỗi N.
+d) Giảm kích thước của mảng.
+
+31. Theo văn bản, thuật toán nào có thời gian chạy tuyến tính (linear)?
+*a) Một chương trình dựa trên một vòng lặp `for` đơn.
+b) Tìm kiếm nhị phân.
+c) Mergesort.
+d) ThreeSum.
+
+32. `Mergesort` được xếp vào loại bậc tăng trưởng nào?
+a) Tuyến tính.
+b) Bậc hai.
+*c) Tuyệt đối tuyến tính.
+d) Lôgarit.
+
+33. `Insertion sort` được xếp vào loại bậc tăng trưởng nào?
+a) Tuyệt đối tuyến tính.
+*b) Bậc hai.
+c) Bậc ba.
+d) Tuyến tính.
+
+34. Theo văn bản, các thuật toán có thời gian chạy `2^N` hoặc cao hơn được gọi là:
+a) Bậc hai.
+b) Tuyến tính.
+*c) Mũ (Exponential).
+d) Lôgarit.
+
+35. Theo văn bản, tại sao chúng ta thường chỉ làm việc với xấp xỉ dấu ngã của các hàm?
+*a) Để đơn giản hóa các công thức toán học bằng cách bỏ qua các số hạng không đáng kể.
+b) Vì các trình biên dịch không thể xử lý các công thức chính xác.
+c) Vì các thuật toán luôn có thời gian chạy chính xác.
+d) Để đảm bảo rằng các chương trình luôn chạy nhanh.
+
+36. Theo văn bản, `Arrays.sort()` được thực hiện bằng thuật toán nào?
+a) Insertion sort.
+*b) Mergesort.
+c) Quicksort.
+d) ThreeSum.
+
+37. Một trong những bước để phát triển mô hình toán học là gì?
+a) Chạy chương trình và đo thời gian.
+*b) Xác định tần suất thực thi của các thao tác trong vòng lặp bên trong.
+c) Phân tích mã nguồn của trình biên dịch.
+d) Đếm tất cả các câu lệnh trong chương trình.
+
+38. "Luật lũy thừa" là giả thuyết mà dữ liệu phù hợp với phương trình nào?
+*a) T(N) = a * N^b.
+b) T(N) = a * b^N.
+c) T(N) = a * N log N.
+d) T(N) = a * N.
+
+39. Theo văn bản, trong phân tích thời gian chạy của `Whitelist`, nếu kích thước danh sách trắng (N) tăng gấp đôi, thời gian chạy sẽ thay đổi như thế nào?
+a) Tăng gấp đôi.
+*b) Tăng nhẹ.
+c) Tăng theo cấp số mũ.
+d) Giảm.
+
+40. Theo văn bản, khi N lớn, `14N` và `N lg N` rất gần nhau trên biểu đồ, điều này có thể gây ra vấn đề gì khi kiểm tra giả thuyết thực nghiệm?
+a) Thật khó để biết liệu thuật toán có phải là tuyến tính hay không.
+*b) Thật khó để biết liệu thuật toán có phải là tuyến tính hay tuyệt đối tuyến tính.
+c) Thật khó để biết liệu thuật toán có phải là bậc hai hay không.
+d) Thật khó để biết liệu thuật toán có phải là hằng số hay không.
+
+41. Thuật ngữ nào được sử dụng để chỉ một giả thuyết về hiệu suất của một thuật toán, cần được xác thực bằng thực nghiệm?
+*a) Thuộc tính (Property).
+b) Mệnh đề (Proposition).
+c) Giả thuyết (Hypothesis).
+d) Luật (Law).
+
+42. Theo văn bản, tại sao ký hiệu Big-Oh được sử dụng rộng rãi mặc dù nó không hữu ích cho việc so sánh hiệu suất?
+a) Vì nó mô tả cận dưới chính xác.
+b) Vì nó dễ tính toán.
+*c) Vì nó giúp phát triển cận trên về bậc tăng trưởng, ngay cả với các thuật toán phức tạp.
+d) Vì nó là ký hiệu duy nhất được chấp nhận.
+
+43. Theo văn bản, `ThreeSum` là một triển khai của thuật toán nào?
+*a) Thuật toán vét cạn.
+b) Tìm kiếm nhị phân.
+c) Sắp xếp hợp nhất.
+d) Vòng lặp lồng nhau.
+
+44. Trong bài toán 3-sum, Mệnh đề B tuyên bố rằng thuật toán vét cạn sử dụng bao nhiêu lần truy cập mảng?
+a) ~N^2
+*b) ~N^3/2
+c) ~N^3/6
+d) ~N log N
+
+45. Chi phí của `Arrays.sort()` được giả định là nhỏ so với `M lg N` trong phân tích `Whitelist` vì:
+a) `N` luôn nhỏ hơn `M`.
+b) `Arrays.sort()` có bậc tăng trưởng tuyến tính.
+*c) `Arrays.sort()` có bậc tăng trưởng N log N, nhỏ hơn so với `M lg N` khi `M >> N`.
+d) Việc sắp xếp không tốn thời gian.
+
+46. Theo văn bản, phương pháp khoa học được áp dụng cho việc nghiên cứu thời gian chạy của chương trình bao gồm bước nào?
+*a) Quan sát, giả thuyết, dự đoán, xác minh.
+b) Phỏng vấn, khảo sát, phân tích, kết luận.
+c) Đo lường, báo cáo, công bố, kiểm tra.
+d) Lập trình, biên dịch, chạy, sửa lỗi.
+
+47. Bằng chứng cho Giả thuyết A ("bậc tăng trưởng của thời gian chạy của ThreeSum là N^3") đến từ đâu?
+a) Chỉ từ các thí nghiệm.
+b) Chỉ từ mô hình toán học.
+*c) Từ cả mô hình toán học và các thí nghiệm.
+d) Từ kinh nghiệm của lập trình viên.
+
+48. Câu hỏi "Tại sao chương trình của tôi lại hết bộ nhớ?" là một ví dụ về câu hỏi về hiệu suất gì?
+a) Tốc độ.
+*b) Bộ nhớ.
+c) Độ chính xác.
+d) Tính bảo mật.
+
+49. Theo văn bản, tại sao việc đo lường chính xác thời gian chạy của một chương trình lại khó khăn?
+*a) Có thể có các yếu tố khác như hệ điều hành đang làm việc.
+b) Chương trình quá phức tạp.
+c) Đồng hồ bấm giờ không chính xác.
+d) Các phép đo không thể tái lập.
+
+50. Theo văn bản, nếu thời gian chạy của một chương trình là `T(N) = a * N log N`, thì tỷ lệ thời gian chạy khi `N` tăng gấp đôi (`T(2N)/T(N)`) sẽ xấp xỉ bằng bao nhiêu?
+a) 2
+b) 4
+c) 8
+*d) 2 * log(2N) / log(N), xấp xỉ 2.
+
+### 50 câu hỏi trắc nghiệm về phân loại thuật toán
+
+1.  Một thuật toán có thời gian chạy không phụ thuộc vào kích thước bài toán N được xếp vào loại nào?
+    a) Lôgarit
+    b) Tuyến tính
+    \*c) Hằng số
+    d) Tuyệt đối tuyến tính
+
+2.  Tìm kiếm nhị phân (Binary Search) là một ví dụ điển hình cho thuật toán có bậc tăng trưởng nào?
+    \*a) Lôgarit
+    b) Tuyến tính
+    c) Tuyệt đối tuyến tính
+    d) Bậc hai
+
+3.  Thời gian chạy của một thuật toán được gọi là "tuyến tính" (linear) nếu nó tỷ lệ thuận với điều gì?
+    \*a) Kích thước bài toán N
+    b) log N
+    c) N^2
+    d) 2^N
+
+4.  Thuật toán `Mergesort` được biết đến với bậc tăng trưởng thời gian chạy là gì?
+    a) N^2
+    \*b) N log N
+    c) N^3
+    d) log N
+
+5.  Loại thuật toán nào thường có hai vòng lặp `for` lồng nhau?
+    a) Tuyến tính
+    \*b) Bậc hai
+    c) Bậc ba
+    d) Lôgarit
+
+6.  Trong phân loại thuật toán, thuật toán `ThreeSum` là một ví dụ điển hình cho loại nào?
+    a) Bậc hai
+    \*b) Bậc ba
+    c) Tuyến tính
+    d) Tuyệt đối tuyến tính
+
+7.  Loại thuật toán nào có thời gian chạy tăng theo cấp số nhân (ví dụ: 2^N)?
+    a) Tuyến tính
+    b) Bậc hai
+    c) Lôgarit
+    \*d) Mũ (Exponential)
+
+8.  Đoạn mã sau có bậc tăng trưởng thời gian chạy là gì?
+
+<!-- end list -->
+
+```java
+for (int i = 0; i < N; i++) {
+    sum += i;
+}
+```
+
+a) Bậc hai
+b) Lôgarit
+c) Hằng số
+\*d) Tuyến tính
+
+9.  Đoạn mã sau có bậc tăng trưởng thời gian chạy là gì?
+
+<!-- end list -->
+
+```java
+int a = 5;
+int b = 10;
+int c = a + b;
+```
+
+a) Tuyến tính
+b) Bậc hai
+c) Lôgarit
+\*d) Hằng số
+
+10. Đoạn mã sau có bậc tăng trưởng thời gian chạy là gì?
+
+<!-- end list -->
+
+```java
+for (int i = 0; i < N; i++) {
+    for (int j = 0; j < N; j++) {
+        // Some constant time operation
+    }
+}
+```
+
+a) Tuyến tính
+\*b) Bậc hai
+c) Bậc ba
+d) Tuyệt đối tuyến tính
+
+11. Thuật toán sắp xếp `Insertion sort` và `Selection sort` được phân loại là gì?
+    a) Tuyến tính
+    \*b) Bậc hai
+    c) Tuyệt đối tuyến tính
+    d) Lôgarit
+
+12. Một thuật toán được gọi là "tuyến tính" (linearithmic) nếu bậc tăng trưởng của nó là gì?
+    a) log N
+    b) N^2
+    \*c) N log N
+    d) N
+
+13. Các thuật toán nào được văn bản coi là không khả thi cho các bài toán lớn?
+    a) Lôgarit và Tuyến tính
+    b) Tuyệt đối tuyến tính
+    \*c) Bậc hai và Bậc ba
+    d) Hằng số
+
+14. Theo văn bản, thuật toán `Quicksort` (khi được triển khai một cách hiệu quả) thường có bậc tăng trưởng là gì?
+    a) Tuyến tính
+    b) Bậc hai
+    \*c) Tuyệt đối tuyến tính
+    d) Lôgarit
+
+15. Đoạn mã sau có bậc tăng trưởng thời gian chạy là gì?
+
+<!-- end list -->
+
+```java
+for (int i = 0; i < N; i++) {
+    for (int j = 0; j < N; j++) {
+        for (int k = 0; k < N; k++) {
+            // Some constant time operation
+        }
+    }
+}
+```
+
+a) Bậc hai
+\*b) Bậc ba
+c) Tuyệt đối tuyến tính
+d) Mũ
+
+16. Một thuật toán có thời gian chạy `~ a * N^3` được phân loại là gì?
+    a) Tuyến tính
+    b) Bậc hai
+    \*c) Bậc ba
+    d) Mũ
+
+17. Lớp thuật toán nào được coi là "hầu như không chậm hơn một chương trình có thời gian hằng số"?
+    \*a) Lôgarit
+    b) Tuyến tính
+    c) Tuyệt đối tuyến tính
+    d) Bậc hai
+
+18. Trong phân tích thời gian chạy của thuật toán, bậc tăng trưởng nào được ưu tiên nhất?
+    a) Bậc ba
+    \*b) Hằng số
+    c) Tuyến tính
+    d) Bậc hai
+
+19. `ThreeSum`, được triển khai bằng ba vòng lặp lồng nhau, có bậc tăng trưởng N^3. Điều này có nghĩa là nếu kích thước đầu vào tăng gấp đôi, thời gian chạy sẽ tăng lên khoảng bao nhiêu lần?
+    a) 2 lần
+    b) 4 lần
+    \*c) 8 lần
+    d) 16 lần
+
+20. Đoạn mã sau có bậc tăng trưởng thời gian chạy là gì?
+
+<!-- end list -->
+
+```java
+while (N > 1) {
+    N = N / 2;
+}
+```
+
+a) Tuyến tính
+b) Hằng số
+\*c) Lôgarit
+d) Bậc hai
+
+21. Nếu một chương trình xử lý mỗi phần dữ liệu đầu vào trong một khoảng thời gian không đổi, nó có bậc tăng trưởng là gì?
+    a) Hằng số
+    b) Lôgarit
+    \*c) Tuyến tính
+    d) Tuyệt đối tuyến tính
+
+22. Theo văn bản, bậc tăng trưởng `N log N` xuất hiện trong các thuật toán nào?
+    a) Các thuật toán tìm kiếm.
+    b) Các thuật toán vét cạn.
+    \*c) Các thuật toán sắp xếp hiệu quả.
+    d) Các thuật toán có hai vòng lặp lồng nhau.
+
+23. Bậc tăng trưởng nào sau đây lớn nhất?
+    a) N
+    b) N log N
+    c) N^2
+    \*d) 2^N
+
+24. Bậc tăng trưởng nào sau đây nhỏ nhất?
+    \*a) log N
+    b) N
+    c) N log N
+    d) N^2
+
+25. Một thuật toán với bậc tăng trưởng `N^(3/2)` được xếp vào loại nào?
+    a) Bậc hai
+    b) Tuyến tính
+    c) Tuyệt đối tuyến tính
+    \*d) Không phải là một trong các phân loại phổ biến (Constant, Log, Linear, Linearithmic, Quad, Cubic, Exp).
+
+26. `ThreeSum` là một ví dụ về thuật toán `vét cạn` (brute-force) vì nó:
+    a) Có thời gian chạy nhanh.
+    \*b) Kiểm tra tất cả các bộ ba có thể có.
+    c) Chỉ sử dụng một vòng lặp `for`.
+    d) Có thời gian chạy hằng số.
+
+27. Theo văn bản, bậc tăng trưởng của thời gian chạy của một thuật toán phụ thuộc chủ yếu vào điều gì?
+    \*a) Thuật toán và mô hình đầu vào.
+    b) Ngôn ngữ lập trình được sử dụng.
+    c) Tốc độ của CPU.
+    d) Kích thước bộ nhớ.
+
+28. Các thuật toán tối ưu là những thuật toán có bậc tăng trưởng tiệm cận trường hợp xấu nhất tốt nhất. Chúng được mô tả bằng ký hiệu nào?
+    a) O
+    b) Ω
+    \*c) Θ
+    d) \~
+
+29. Phân loại "tuyến tính" (linearithmic) của thuật toán Mergesort có ý nghĩa gì đối với hiệu suất của nó?
+    a) Nó chậm hơn so với thuật toán bậc hai.
+    \*b) Nó hiệu quả hơn nhiều so với thuật toán bậc hai cho các bài toán lớn.
+    c) Nó nhanh hơn so với thuật toán tuyến tính.
+    d) Nó có thời gian chạy hằng số.
+
+30. Đoạn mã sau có bậc tăng trưởng thời gian chạy là gì?
+
+<!-- end list -->
+
+```java
+for (int i = 0; i < N; i++) {
+    for (int j = i + 1; j < N; j++) {
+        // Some constant time operation
+    }
+}
+```
+
+a) Tuyến tính
+\*b) Bậc hai
+c) Bậc ba
+d) Tuyệt đối tuyến tính
+
+31. Theo văn bản, thuật toán nào thường được sử dụng để sắp xếp danh sách trắng trong chương trình `Whitelist`?
+    \*a) Mergesort
+    b) Insertion sort
+    c) Selection sort
+    d) Quicksort
+
+32. Vòng lặp bên trong của chương trình `BinarySearch` có bậc tăng trưởng là gì?
+    a) Hằng số
+    \*b) Lôgarit
+    c) Tuyến tính
+    d) Bậc hai
+
+33. Nếu thời gian chạy của một thuật toán được xấp xỉ bằng `~ a * N log N`, nó được xếp vào loại nào?
+    a) Tuyến tính
+    b) Bậc hai
+    \*c) Tuyệt đối tuyến tính
+    d) Bậc ba
+
+34. Việc phân loại thuật toán theo bậc tăng trưởng giúp chúng ta làm gì?
+    a) Viết mã nhanh hơn.
+    b) Hiểu rõ hơn về cách máy tính hoạt động.
+    \*c) Dự đoán hiệu suất và so sánh các thuật toán một cách độc lập với máy tính cụ thể.
+    d) Tìm lỗi trong chương trình.
+
+35. Theo văn bản, thời gian chạy của một chương trình có thể được coi là `O(N^2)` và `~ a * N log N`. Điều này có nghĩa là gì?
+    a) Lỗi trong phân tích.
+    \*b) O(N^2) chỉ là cận trên, hiệu suất thực tế tốt hơn nhiều.
+    c) Ký hiệu dấu ngã sai.
+    d) Thuật toán có cả hai đặc điểm trên.
+
+36. Theo văn bản, các thuật toán có thời gian chạy `N log N` có thể rất gần với các thuật toán có thời gian chạy tuyến tính (`N`) khi `N` lớn. Điều này có thể gây khó khăn cho việc phân loại bằng thực nghiệm như thế nào?
+    a) Khó để xác định xem thuật toán có phải là `O(N)` hay không.
+    b) Khó để xác định xem thuật toán có phải là `O(N^2)` hay không.
+    \*c) Khó để phân biệt giữa thuật toán tuyến tính và tuyệt đối tuyến tính.
+    d) Khó để biết khi nào thuật toán sẽ hoàn thành.
+
+37. Tốc độ thực thi của một lệnh Java được coi là gì?
+    a) Tuyến tính
+    b) Phụ thuộc vào dữ liệu
+    \*c) Hằng số
+    d) Lôgarit
+
+38. Đoạn mã sau có bậc tăng trưởng thời gian chạy là gì?
+
+<!-- end list -->
+
+```java
+for (int i = 0; i < N; i++) {
+    // Some constant time operation
+    if (i % 2 == 0) {
+        // Some other constant time operation
+    }
+}
+```
+
+\*a) Tuyến tính
+b) Bậc hai
+c) Hằng số
+d) Lôgarit
+
+39. Một thuật toán được gọi là "tối ưu" (optimal) nếu:
+    a) Nó có thời gian chạy nhanh nhất.
+    b) Nó được viết bằng ngôn ngữ lập trình hiệu quả nhất.
+    c) Nó được triển khai với ký hiệu Big-Oh.
+    \*d) Không có thuật toán nào có bậc tăng trưởng tiệm cận trường hợp xấu nhất tốt hơn.
+
+40. Việc sử dụng các nguyên thủy cấu trúc như câu lệnh, điều kiện và vòng lặp thường dẫn đến việc bậc tăng trưởng của chi phí là gì?
+    a) Luôn là bậc ba.
+    b) Rất phức tạp và khó phân loại.
+    \*c) Một trong số ít các hàm phổ biến theo kích thước bài toán N.
+    d) Luôn là tuyến tính.
+
+41. Bậc tăng trưởng của thuật toán `Selection sort` khi sắp xếp một mảng gồm `N` phần tử là gì?
+    a) N log N
+    b) N
+    \*c) N^2
+    d) log N
+
+42. Theo văn bản, việc phân loại thuật toán bằng ký hiệu Big-Oh là hữu ích cho việc cung cấp:
+    a) Dự đoán chính xác về thời gian chạy.
+    b) So sánh hiệu suất giữa các thuật toán.
+    \*c) Các cận trên tiệm cận của hiệu suất.
+    d) Các cận dưới chính xác của hiệu suất.
+
+43. Một thuật toán có bậc tăng trưởng là `N log N` sẽ nhanh hơn hay chậm hơn một thuật toán có bậc tăng trưởng là `N^2` khi `N` rất lớn?
+    \*a) Nhanh hơn nhiều.
+    b) Chậm hơn một chút.
+    c) Tốc độ tương đương.
+    d) Phụ thuộc vào hằng số.
+
+44. Đoạn mã sau có bậc tăng trưởng thời gian chạy là gì?
+
+<!-- end list -->
+
+```java
+int a = 0;
+for (int i = 0; i < N; i++) {
+    a++;
+}
+for (int i = 0; i < N; i++) {
+    a++;
+}
+```
+
+a) Bậc hai
+\*b) Tuyến tính
+c) Hằng số
+d) Lôgarit
+
+45. Vòng lặp bên trong của một chương trình thường có bậc tăng trưởng gì?
+    a) Hằng số
+    b) Tuyến tính
+    c) Phụ thuộc vào chương trình
+    \*d) Bậc tăng trưởng của vòng lặp bên trong là yếu tố quyết định bậc tăng trưởng của toàn bộ chương trình.
+
+46. Phân loại nào của thuật toán được sử dụng để mô tả các thuật toán sắp xếp hiệu quả như Mergesort và Quicksort?
+    a) Tuyến tính
+    b) Bậc hai
+    \*c) Tuyệt đối tuyến tính
+    d) Lôgarit
+
+47. Theo văn bản, các thuật toán bậc hai và bậc ba có thể được thay thế bằng các thuật toán thông minh nào để giải quyết các bài toán lớn?
+    a) Các thuật toán tuyến tính.
+    \*b) Các thuật toán tuyệt đối tuyến tính.
+    c) Các thuật toán hằng số.
+    d) Các thuật toán mũ.
+
+48. Bậc tăng trưởng của thời gian chạy của một thuật toán phụ thuộc vào điều gì, ngoài thuật toán và mô hình đầu vào?
+    a) Chi phí của mỗi câu lệnh.
+    \*b) Các yếu tố như tần suất thực hiện các câu lệnh.
+    c) Ngôn ngữ lập trình được sử dụng.
+    d) Kích thước của tệp mã nguồn.
+
+49. Bậc tăng trưởng nào là phù hợp nhất để mô tả thuật toán tìm kiếm tuần tự (linear search) trên một mảng N phần tử?
+    a) Lôgarit
+    \*b) Tuyến tính
+    c) Hằng số
+    d) Bậc hai
+
+50. Theo văn bản, tại sao chúng ta thường không chỉ định cơ số của lôgarit khi nói về bậc tăng trưởng?
+    a) Vì tất cả các lôgarit với một cơ số hằng số đều liên quan bởi một hằng số.
+    b) Vì logarit không quan trọng trong phân tích.
+    \*c) Cả a và b đều đúng.
+    d) Cả a và b đều sai.
+
+### Đề thi Phân tích thuật toán: 10 câu hỏi trắc nghiệm
+
+**1. Ký hiệu Big-Oh (O) thường được sử dụng trong phân tích thuật toán để làm gì?**
+a) Cung cấp một ước tính chính xác về thời gian chạy của thuật toán.
+b) So sánh hiệu suất của hai thuật toán khác nhau.
+c) Mô tả cận dưới tiệm cận của hiệu suất.
+\*d) Cung cấp một cận trên tiệm cận về hiệu suất của thuật toán.
+
+**2. Một thuật toán được phân loại là "tuyến tính" (linear) nếu thời gian chạy của nó có bậc tăng trưởng nào?**
+a) N log N
+b) N^2
+\*c) N
+d) log N
+
+**3. Theo văn bản đã dịch, thuật ngữ nào được dùng để chỉ một giả thuyết về hiệu suất của một thuật toán cần được xác thực bằng thực nghiệm?**
+a) Mệnh đề (Proposition)
+\*b) Thuộc tính (Property)
+c) Định luật (Law)
+d) Thuyết (Theory)
+
+**4. Khi phân tích một chương trình, việc xác định "vòng lặp bên trong" (inner loop) là rất quan trọng vì:**
+a) Đó là nơi các lỗi lập trình thường xảy ra.
+\*b) Các câu lệnh trong vòng lặp này được thực thi thường xuyên nhất và chi phối tổng thời gian chạy.
+c) Nó luôn chứa các thao tác phức tạp nhất.
+d) Nó xác định kích thước đầu vào của chương trình.
+
+**5. Đoạn mã sau có bậc tăng trưởng thời gian chạy là gì?**
+
+```java
+for (int i = 0; i < N; i++) {
+    for (int j = 0; j < i; j++) {
+        // Constant time operation
+    }
+}
+```
+
+a) Tuyến tính
+\*b) Bậc hai
+c) Bậc ba
+d) Tuyệt đối tuyến tính
+
+**6. Một chương trình có thời gian chạy được mô tả bằng xấp xỉ `~ a * N log N` được phân loại là gì?**
+a) Tuyến tính
+b) Bậc hai
+c) Lôgarit
+\*d) Tuyệt đối tuyến tính
+
+**7. Theo Knuth, thời gian chạy của một chương trình được xác định bởi hai yếu tố chính nào?**
+\*a) Chi phí thực hiện mỗi câu lệnh và tần suất thực hiện mỗi câu lệnh.
+b) Tốc độ CPU và kích thước bộ nhớ.
+c) Ngôn ngữ lập trình và hệ điều hành.
+d) Kích thước đầu vào và loại dữ liệu.
+
+**8. Theo định nghĩa chính thức, `f(N) ~ g(N)` nếu `lim(N→∞) f(N)/g(N) = 1`. Điều này có nghĩa là gì?**
+a) `f(N)` và `g(N)` bằng nhau với mọi `N`.
+\*b) Khi `N` trở nên rất lớn, tỉ lệ của `f(N)` và `g(N)` tiến về 1.
+c) `f(N)` luôn nhỏ hơn `g(N)`.
+d) `f(N)` và `g(N)` có mối quan hệ tuyến tính.
+
+**9. Bậc tăng trưởng thời gian chạy của thuật toán `ThreeSum` là `N^3`. Nếu một máy tính có thể chạy thuật toán này với đầu vào `N = 1000` trong `1` giây, thì ước tính thời gian chạy với đầu vào `N = 2000` là bao nhiêu?**
+a) `2` giây
+b) `4` giây
+\*c) `8` giây
+d) `16` giây
+
+**10. Mục đích của việc sử dụng một "mô hình chi phí" (cost model) trong phân tích thuật toán là gì?**
+a) Để đo lường thời gian chạy thực tế của một chương trình.
+\*b) Để đưa ra các phát biểu toán học chính xác về các thuộc tính của một thuật toán, không phụ thuộc vào cách triển khai cụ thể.
+c) Để xác định chi phí tiền bạc cho việc sử dụng một thuật toán.
+d) Để so sánh hiệu suất giữa các máy tính khác nhau.
