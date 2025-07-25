@@ -161,26 +161,26 @@ Rất nhiều thuật toán mà chúng ta xem xét có đặc điểm hiệu nă
 Các biểu đồ bên trái chỉ ra tầm quan trọng của bậc tăng trưởng trong thực tế. Trục x là kích thước bài toán; trục y là thời gian chạy. Các biểu đồ này làm rõ rằng các thuật toán bậc hai và bậc ba không khả thi để sử dụng cho các bài toán lớn. Như chúng ta sẽ thấy, một số bài toán quan trọng có các giải pháp tự nhiên là bậc hai nhưng lại có các thuật toán thông minh là linearithmic. Các thuật toán như vậy (chẳng hạn mergesort) có vai trò cực kỳ quan trọng trong thực tế vì chúng cho phép chúng ta giải quyết các bài toán có kích thước lớn hơn nhiều so với khả năng của các giải pháp bậc hai. Tất nhiên, vì thế mà trong cuốn sách này, chúng ta tập trung vào việc xây dựng các thuật toán lôgarit, tuyến tính và linearithmic cho các bài toán cơ bản
 
 ## Q&A
-**Hỏi:** Tôi đã chạy DoublingRatio trên máy tính của mình, nhưng kết quả không nhất quán như trong sách. Một số tỷ lệ không gần với 8. Tại sao vậy?
+**Hỏi:** Tôi đã chạy DoublingRatio trên máy tính của mình, nhưng kết quả không nhất quán như trong sách. Một số tỷ lệ không gần với 8. Tại sao vậy?  
 **Đáp:** Đó là lý do tại sao chúng tôi đã thảo luận về "những điều cần lưu ý" ở trang 195. Rất có thể, hệ điều hành của máy tính bạn đã quyết định làm việc khác trong quá trình thí nghiệm. Một cách để giảm thiểu những vấn đề như vậy là dành nhiều thời gian hơn cho nhiều thí nghiệm hơn. Ví dụ, bạn có thể thay đổi DoublingTest để chạy các thí nghiệm 1.000 lần cho mỗi N, đưa ra ước tính chính xác hơn nhiều về thời gian chạy cho mỗi kích thước (xem Bài tập 1.4.39).
 
-**Hỏi:** "Khi N tăng" nghĩa chính xác là gì trong định nghĩa của ký hiệu dấu ngã (~)?
+**Hỏi:** "Khi N tăng" nghĩa chính xác là gì trong định nghĩa của ký hiệu dấu ngã (~)?  
 **Đáp:** Định nghĩa hình thức của $f(N) \sim g(N)$ là $\lim_{N \to \infty} \frac{f(N)}{g(N)} = 1$.
 
-**Hỏi:** Tôi đã thấy các ký hiệu khác được dùng để mô tả bậc tăng trưởng. Vì sao ở đây lại khác?
+**Hỏi:** Tôi đã thấy các ký hiệu khác được dùng để mô tả bậc tăng trưởng. Vì sao ở đây lại khác?  
 **Đáp:** Ký hiệu "Ô lớn" ("big-Oh") được sử dụng rộng rãi: chúng ta nói rằng $f(N)$ là $O(g(N))$ nếu tồn tại các hằng số $c$ và $N_0$ sao cho $|f(N)| < c \times g(N)$ với mọi $N > N_0$. Ký hiệu này rất hữu ích trong việc cung cấp các cận trên tiệm cận về hiệu suất của thuật toán, điều này quan trọng trong lý thuyết thuật toán. Nhưng nó không hữu ích cho việc dự đoán hiệu suất hoặc so sánh các thuật toán.
 
-**Hỏi:** Tại sao không?
+**Hỏi:** Tại sao không?  
 **Đáp:** Lý do chính là nó chỉ mô tả một cận trên về thời gian chạy. Hiệu suất thực tế có thể tốt hơn nhiều. Thời gian chạy của một thuật toán có thể vừa là $O(N^2)$ vừa là $~ a N log N$. Kết quả là, nó không thể được sử dụng để biện minh cho các thử nghiệm như thử nghiệm tỷ lệ gấp đôi của chúng ta (xem Mệnh đề C ở trang 193).
 
-**Hỏi:** Vậy tại sao ký hiệu big-Oh lại được sử dụng rộng rãi như vậy?
+**Hỏi:** Vậy tại sao ký hiệu big-Oh lại được sử dụng rộng rãi như vậy?  
 **Đáp:** Nó tạo điều kiện thuận lợi cho việc xây dựng các cận trên về bậc tăng trưởng, ngay cả đối với các thuật toán phức tạp mà việc phân tích chính xác hơn có thể không khả thi. Hơn nữa, nó tương thích với các ký hiệu "big-Omega" và "big-Theta" mà các nhà khoa học máy tính lý thuyết sử dụng để phân loại thuật toán bằng  giới hạn hiệu suất trường hợp xấu nhất của chúng. Chúng ta nói rằng $f(N)$ là $Ω(g(N))$ nếu tồn tại các hằng số $c$ và $N_0$ sao cho $|f(N)| > c g(N)$ với $N > N_0$; và nếu $f(N)$ vừa là $O(g(N))$ vừa là $Ω(g(N))$, chúng ta nói rằng $f(N)$ là $Θ(g(N))$. Ký hiệu "big-Omega" thường được sử dụng để mô tả một cận dưới của trường hợp xấu nhất, và ký hiệu "big-Theta" thường được sử dụng để mô tả hiệu năng của các thuật toán *tối ưu* theo nghĩa là không có thuật toán nào có thể có bậc tăng của trường hợp xấu nhất có cận trên tốt hơn. Trong các ứng dụng thực tế, các thuật toán tối ưu chắc chắn đáng được xem xét sử dụng, nhưng còn có nhiều cân nhắc khác, như bạn sẽ thấy.
 
-**Hỏi:** Các cận trên về hiệu suất tiệm cận không quan trọng sao?
+**Hỏi:** Các cận trên về hiệu suất tiệm cận không quan trọng sao?  
 **Đáp:** Có, nhưng chúng tôi muốn thảo luận về các kết quả chính xác theo tần suất chạy các câu lệnh, tính theo các mô hình chi phí, bởi vì chúng cung cấp nhiều thông tin hơn về hiệu suất thuật toán, và bởi vì việc rút ra các kết quả như vậy là khả thi đối với các thuật toán mà chúng tôi thảo luận. Ví dụ, chúng ta nói "`ThreeSum` sử dụng khoảng $\sim N^3/2$ lần truy cập mảng" và "số lần `cnt++` được thực thi trong `ThreeSum` là khoảng $\sim N^3/6$ trong trường hợp xấu nhất," cách nói này dài dòng hơn một chút nhưng cung cấp nhiều thông tin hơn so với câu nói "thời gian chạy của `ThreeSum` là $O(N^3)$."
 
-**Hỏi:** Khi bậc tăng trưởng của thời gian chạy của một thuật toán là $N \log N$, thử nghiệm gấp đôi (doubling test) sẽ dẫn đến giả thuyết rằng thời gian chạy là $\sim a N$ với một hằng số $a$. Đó không phải là một vấn đề sao?
+**Hỏi:** Khi bậc tăng trưởng của thời gian chạy của một thuật toán là $N \log N$, thử nghiệm gấp đôi (doubling test) sẽ dẫn đến giả thuyết rằng thời gian chạy là $\sim a N$ với một hằng số $a$. Đó không phải là một vấn đề sao?  
 **Đáp:** Chúng ta phải cẩn thận không cố suy luận rằng dữ liệu thực nghiệm hàm ý một mô hình toán học cụ thể. Nhưng khi chúng ta chỉ cần dự đoán hiệu suất, đây không thực sự là một vấn đề. Ví dụ, khi $N$ nằm giữa 16000 và 32000, hai đường đồ thị $14N$ và $N \lg N$ đã rất gần nhau. Dữ liệu khớp với cả hai đường. Khi $N$ tăng, hai đường đồ thị này còn trở nên gần nhau hơn nữa. Trong thực tế, cần phải cẩn thận khi dùng thực nghiệm để kiểm định giả thuyết rằng thời gian chạy của một thuật toán là linearithmic mà không phải tuyến tính.
 
-**Hỏi:** `int[] a = new int[N]` có được tính là $N$ lần truy cập mảng (để khởi tạo các phần tử thành 0) không?
+**Hỏi:** `int[] a = new int[N]` có được tính là $N$ lần truy cập mảng (để khởi tạo các phần tử thành 0) không?  
 **Đáp:** Rất có thể là có, vì vậy chúng tôi dùng giả định đó trong cuốn sách này, mặc dù một trình biên dịch tinh vi có thể cố gắng tránh chi phí này cho các mảng thưa kích thước lớn.

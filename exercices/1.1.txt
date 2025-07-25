@@ -1,0 +1,61 @@
+### 10 câu hỏi về Tìm kiếm nhị phân
+
+1. **Tìm kiếm nhị phân được thực hiện trên cấu trúc dữ liệu nào?**
+a) Một mảng ngẫu nhiên (chưa được sắp xếp).
+b) Một danh sách liên kết.
+*c) Một mảng đã được sắp xếp.
+d) Một hàng đợi ưu tiên.
+
+2. **Thuật toán tìm kiếm nhị phân hoạt động bằng cách nào để tìm một phần tử (khóa) trong mảng?**
+a) Duyệt qua từng phần tử từ đầu đến cuối mảng.
+b) So sánh khóa với phần tử đầu tiên của mảng.
+*c) Liên tục chia đôi khoảng tìm kiếm cho đến khi tìm thấy khóa hoặc khoảng trống rỗng.
+d) Sử dụng ba vòng lặp lồng nhau để kiểm tra tất cả các bộ ba.
+
+3. **Trong triển khai của thuật toán tìm kiếm nhị phân, các biến `lo` và `hi` được sử dụng để làm gì?**
+*a) Định nghĩa khoảng tìm kiếm hiện tại trong mảng.
+b) Đếm số lần lặp của vòng lặp.
+c) Lưu trữ giá trị lớn nhất và nhỏ nhất trong mảng.
+d) Chứa khóa và chỉ số của khóa.
+
+4. **Khi khóa được so sánh với phần tử ở giữa (`a[mid]`) và nhỏ hơn, thuật toán sẽ làm gì tiếp theo?**
+a) Dừng lại và trả về -1.
+b) Tìm kiếm ở nửa bên phải của khoảng.
+*c) Tìm kiếm ở nửa bên trái của khoảng bằng cách cập nhật `hi = mid - 1`.
+d) Tiếp tục tìm kiếm trong toàn bộ mảng ban đầu.
+
+5. **Bậc tăng trưởng thời gian chạy của thuật toán tìm kiếm nhị phân là gì?**
+a) Tuyến tính (N)
+*b) Lôgarit (log N)
+c) Bậc hai (N^2)
+d) Tuyệt đối tuyến tính (N log N)
+
+6. **Hiệu suất của tìm kiếm nhị phân có ý nghĩa gì đối với việc xử lý các bài toán lớn?**
+a) Nó quá chậm để sử dụng cho dữ liệu lớn.
+b) Hiệu suất của nó phụ thuộc vào tốc độ của máy tính.
+*c) Nó rất hiệu quả vì chỉ cần kiểm tra một vài phần tử so với kích thước mảng, làm cho nó khả thi cho dữ liệu lớn.
+d) Nó chỉ hoạt động tốt cho các mảng nhỏ.
+
+7. **Trong ví dụ về "đưa vào danh sách trắng" (whitelisting), tại sao việc sử dụng tìm kiếm nhị phân lại quan trọng hơn việc sử dụng một vòng lặp `for` đơn giản để tìm kiếm?**
+a) Tìm kiếm nhị phân đơn giản hơn để viết mã.
+*b) Tìm kiếm nhị phân nhanh hơn nhiều cho các tệp dữ liệu lớn, giúp bài toán khả thi.
+c) Tìm kiếm nhị phân không yêu cầu mảng phải được sắp xếp.
+d) Vòng lặp `for` chỉ có thể tìm thấy một phần tử duy nhất.
+
+8. **Khi nào thì quá trình tìm kiếm nhị phân kết thúc?**
+a) Khi vòng lặp đã chạy hết số lần tối đa.
+b) Khi khoảng tìm kiếm đã được chia đôi 10 lần.
+*c) Khi khóa được tìm thấy hoặc khi khoảng tìm kiếm trở nên trống rỗng.
+d) Khi các biến `lo` và `hi` có giá trị bằng 0.
+
+9. **Nếu một mảng có 16 phần tử, số lần so sánh tối đa mà thuật toán tìm kiếm nhị phân phải thực hiện để tìm một phần tử là bao nhiêu?**
+a) 16
+b) 8
+*c) 5 (lg(16) + 1 = 4 + 1)
+d) 4
+
+10. **Lý do chính để tìm kiếm nhị phân được coi là hiệu quả là gì?**
+a) Nó không sử dụng nhiều bộ nhớ.
+b) Nó không cần sắp xếp mảng.
+c) Nó luôn tìm thấy phần tử được yêu cầu.
+*d) Mỗi lần lặp, nó loại bỏ khoảng một nửa số phần tử còn lại khỏi tập hợp tìm kiếm.
