@@ -1,0 +1,1336 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="vi">
+
+
+<head>
+
+<link rel="apple-touch-icon" href="https://lift.cs.princeton.edu/apple-touch-icon.png"></link>
+<link rel="shortcut icon"    href="https://lift.cs.princeton.edu/favicon.ico"></link>
+<link rel="stylesheet" href="https://algs4.cs.princeton.edu/css/algs4.css" type="text/css" media="screen"></link>
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+<title>
+Hello World in Java (Windows)
+</title>
+
+<style>/* this page only */
+#TJK_ToggleON,#TJK_ToggleOFF{display:none}
+
+html {
+    background-color: #E8F2FB;
+}
+body {
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom:5%;
+    margin-top:5%;
+    padding: 35px; 70px;
+    background-color: white;
+}
+
+</style>
+
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=UTF-8">
+<META NAME="AUTHOR" CONTENT="Robert Sedgewick and Kevin Wayne">
+<META NAME="KEYWORDS" CONTENT="Java,Hello World,Windows,IntelliJ,Sedgewick,Wayne">
+<META NAME="DESCRIPTION" CONTENT="Java,Hello World,Windows,IntelliJ">
+<META NAME="TITLE" CONTENT="Hello World in Java on Windows">
+<META NAME="ROBOTS" CONTENT="INDEX,FOLLOW">
+
+<script type="text/javascript" src="/extras/toggle_elements/TJKToggleDL.js"></script>
+
+</head>
+
+<body onload="TJK_ToggleDL()">
+
+<!---------------------------------------------------------------------------------------- -->
+
+
+<h1 class = center>Hello World in Java (Windows)</h1>
+
+
+<!-- <h2><font color = green>TODO: SIGN INSTALLER AND UPDATE SCREENSHOTS</font></h2> -->
+
+
+<!--
+<p><br>
+<div class="infobox-restrict">
+<p class="notep1">Warning:</p>
+<p>Beta version. Please send bug reports to wayne@princeton.edu.</p>
+</div>
+-->
+
+<p><br>
+
+<img style="padding: 0px 0px 0px 10px"
+     src="images/cover-algs4.png"
+     height = 75
+     align = "right">
+<img style="padding: 0px 0px 0px 10px"
+     src="images/cover-introcs.png"
+     height = 75
+     align = "right">
+<img style="padding: 0px 0px 0px 20px"
+     src="images/cover-java2e.png"
+     height = 75
+     align = "right">
+
+Tài liệu này hướng dẫn bạn cách thiết lập môi trường lập trình Java
+cho máy tính <em>Windows</em>
+<img src = "images/windows.png" hspace = 2 width = 11 alt = "Windows logo">
+của bạn.
+Nó cũng cung cấp hướng dẫn từng bước để tạo và biên dịch một
+chương trình Java trong <em>IntelliJ</em> và thực thi nó từ dòng lệnh.
+<p>
+<!-- You will need a 64-bit version of Windows 8, 10, or 11. -->
+Bạn sẽ cần phiên bản 64-bit của Windows 10 hoặc 11 trên phần cứng Intel x86.
+<p>
+
+
+<p><br>
+
+<TABLE BORDER = 0 CELLPADDING = 6 CELLSPACING = 0 WIDTH = 100%>
+<tr align = "left">
+<td bgcolor = "#4e6994">
+<font size = +0 face = "helvetica" color = "#ffffff">
+&nbsp;&nbsp;&nbsp; 0. &nbsp; Cài đặt Môi trường Lập trình Java
+</table>
+
+<p><br>
+
+Trình cài đặt sẽ cài đặt và cấu hình môi trường lập trình Java, bao gồm
+<em>OpenJDK 11</em> và
+<em>IntelliJ IDEA Community Edition 2024.2</em>.
+
+
+
+<ul>
+<p><li>
+Đăng nhập vào tài khoản người dùng mà bạn sẽ lập trình.
+Tài khoản của bạn phải có quyền Administrator.
+<!-- (with a non-blank password)
+and you must be connected to the Internet.
+ -->
+
+<p><li>
+Download the Windows installer
+<a href = "lift-java-installer.exe">lift-java-installer.exe</a>.
+
+<p><li>
+Nhấp đúp vào <em>lift-java-installer.exe</a></em> để cài đặt phần mềm.
+Nhập mật khẩu Windows của bạn khi được yêu cầu. Sử dụng tất cả các tùy chọn mặc định.
+
+<!--
+<p><font color = red><em>If you receive scary warnings, accept them.
+When we sign the code, they will go away.</font></em><p><br>
+-->
+
+<div class="infobox-warning">
+<p class="notep1">Cảnh báo</p>
+<p>Nếu bạn đã sử dụng <em>IntelliJ 2024.2</em> trước đây,
+chỉ chạy trình cài đặt này nếu bạn muốn cài đặt lại hoàn toàn.
+Trình cài đặt sẽ ghi đè bất kỳ cài đặt <em>IntelliJ 2024.2</em>
+hiện có bằng các cài đặt thân thiện với người mới bắt đầu của chúng tôi.
+<p>
+Trình cài đặt cũng thực hiện cài đặt lại hoàn toàn <em>Git Bash</em>,
+điều này sẽ ghi đè bất kỳ cài đặt người dùng trước đây nào, bao gồm <code>.bashrc</code>.
+</div>
+
+
+<p><li>
+Xóa <em>lift-java-installer.exe</em>.
+</ul>
+
+<p><br>
+
+<!---------------------------------------------------------------------------------------- -->
+
+<TABLE BORDER = 0 CELLPADDING = 6 CELLSPACING = 0 WIDTH = 100%>
+<tr align = "left">
+<td bgcolor = "#4e6994">
+<font size = +0 face = "helvetica" color = "#ffffff">
+&nbsp;&nbsp;&nbsp; 1. &nbsp; Open a Project in IntelliJ
+</table>
+
+<p><br>
+
+Bạn sẽ phát triển các chương trình Java của mình trong một ứng dụng gọi là <em>IntelliJ IDEA Community Edition</em>.
+
+<p>
+<em>IntelliJ</em> tổ chức các chương trình Java thành các <em>project</em>.
+Trong bối cảnh của chúng ta, mỗi project tương ứng với một bài tập lập trình.
+Một project điển hình chứa các chương trình Java, các tệp dữ liệu liên quan, và
+các cài đặt cụ thể của khóa học (như tùy chọn trình biên dịch, quy tắc kiểu dáng, và thư viện sách giáo khoa).
+
+<p>
+<ul>
+<p><li>
+Tải xuống project cho bài tập lập trình của bạn đến một vị trí thuận tiện
+(như <em>Desktop</em>).
+
+
+<!--
+<p><font color = gray>[ sample project for COS 125 (Princeton) ]</font>
+<ul>
+<p><li><a href = "../projects/cos125/hello.zip">hello.zip</a>
+</ul>
+-->
+
+<p><font color = gray>[ dự án mẫu cho COS 126 (Princeton) ]</font>
+<ul>
+<p><li><a href = "../projects/cos126/hello.zip">hello.zip</a>
+</ul>
+
+<p><font color = gray>[ dự án mẫu cho COS 226 (Princeton) ]</font>
+<ul>
+<p><li><a href = "../projects/cos226/hello.zip">hello.zip</a>
+</ul>
+
+<p><font color = gray>[ dự án mẫu cho <em>Computer Science: Programming with a Purpose</em> (Coursera) ]</font>
+<ul>
+<p><li><a href = "https://coursera.cs.princeton.edu/introcs/assignments/hello/hello.zip">hello.zip</a>
+</ul>
+
+<p><font color = gray>[ project mẫu cho <em>Algorithms, Part I or II</em> (Coursera) ]</font>
+<ul>
+<p><li><a href = "https://coursera.cs.princeton.edu/algs4/assignments/hello/hello.zip">hello.zip</a>
+</ul>
+
+<!--
+<p><li><a href = "https://coursera.cs.princeton.edu/algs4/testing/queues/queues.zip">queues.zip</a>
+<p><li><a href = "https://coursera.cs.princeton.edu/algs4/testing/collinear/collinear.zip">collinear.zip</a>
+<p><li><a href = "https://coursera.cs.princeton.edu/algs4/testing/8puzzle/8puzzle.zip">8puzzle.zip</a>
+<p><li><a href = "https://coursera.cs.princeton.edu/algs4/testing/kdtree/kdtree.zip">kdtree.zip</a>
+</ul>
+
+<p><font color = gray>[ Algorithms, Part II assignments for testing ]</font>
+<ul>
+<p><li><a href = "https://coursera.cs.princeton.edu/algs4/assignments/wordnet/wordnet.zip">wordnet.zip</a>
+<p><li><a href = "https://coursera.cs.princeton.edu/algs4/assignments/seam/seam.zip">seam.zip</a>
+<p><li><a href = "https://coursera.cs.princeton.edu/algs4/assignments/boggle/boggle.zip">boggle.zip</a>
+<p><li><a href = "https://coursera.cs.princeton.edu/algs4/assignments/baseball/baseball.zip">baseball.zip</a>
+<p><li><a href = "https://coursera.cs.princeton.edu/algs4/assignments/burrows/burrows.zip">burrows.zip</a>
+</ul>
+
+-->
+
+<p>
+Để giải nén tệp zip, nhấp chuột phải vào nó và chọn <b>Extract All</b>.
+Điều này tạo ra một thư mục project với
+tên của bài tập lập trình tương ứng (như <code class = "outline">hello</code>).
+Xóa tệp zip.
+
+<!--
+<p><br>
+<div class=infobox-warning>
+<p class=notep1>Warning</p>
+If you unzip the file in some other way, you may end up with an extra directory above
+the project folder named after the zip file (such as <code>hello</code>).
+The project folder (such as <code>hello</code>) always contains the file
+<code>logo.png</code> and an <code>.iml</code> file.
+</div><br>
+
+-->
+
+<p><br>
+<div class="infobox-warning">
+<p class="notep1">Cảnh báo</p>
+<p>Các thư mục project chứa thông tin cụ thể của khóa học. Hãy chắc chắn tải xuống
+thư mục tương ứng với tổ chức và khóa học của bạn.
+</div>
+
+<p><br><li>
+
+To launch <em>IntelliJ</em>, click the <b>Start</b> button and type “<em>IntelliJ IDEA Community Edition 2024.2</em>”.
+<p><li>
+When you launch <em>IntelliJ</em> for the first time,
+<ul>
+
+<p><li>
+<em>IntelliJ</em> may display
+the
+<a href = "https://www.jetbrains.com/company/privacy.html">JetBrains privacy policy</a>.
+Scroll down and <em>Accept</em>.
+
+<p><li><em>IntelliJ</em> may ask if you want to send anonymous usage
+statistics to <em>JetBrains</em>. Choose your preferred option.
+
+<p><li><em>IntelliJ</em> will display the <em>Welcome to IntelliJ IDEA</em>
+screen.
+</ul>
+
+<p><li>
+To open a project from the <em>Welcome to IntelliJ IDEA</em> screen,
+click <b>Open</b> and select the project folder.
+
+<p>
+<blockquote>
+<img src = "images/intellij-welcome.png" height = 250 align = middle alt = "Opening a project in IntelliJ">
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src = "images/intellij-select-project.png" height = 250 align = middle alt = "Selecting the project folder in IntelliJ">
+</blockquote>
+
+<p><br>
+Bạn sẽ thấy một logo bài tập (trong cửa sổ chỉnh sửa chính) và danh sách các tệp dự án (trong thanh bên <em>Project View</em> ở bên trái).
+<br>
+Nếu bạn không thấy thanh bên <em>Project View</em>,
+hãy chọn <b>LIFT → Project (Ctrl + 1)</b> để bật/tắt nó.
+
+<blockquote>
+<img src = "images/intellij-hello.png" width = 600 alt = "The Hello, World project in IntelliJ">
+</blockquote>
+<br>
+
+Khi bạn khởi động <em>IntelliJ</em> lần đầu tiên,
+có thể mất một hoặc hai phút để lập chỉ mục các tệp của bạn;
+<!-- một số tính năng (như tự động import) sẽ không khả dụng cho đến khi quá trình này hoàn tất. -->
+một số tính năng sẽ không khả dụng cho đến khi quá trình này hoàn tất.
+
+<p><br>
+
+<div class="infobox-warning">
+<p class="notep1">Cảnh báo</p>
+Không nhấp vào <b>New Project</b>;
+tùy chọn này dành cho lập trình viên nâng cao.
+Ngoài ra, luôn sử dụng <b>Open</b> để mở một thư mục project, không dùng cho một tệp riêng lẻ.
+</div>
+
+<br>
+
+<!-- Project SDK must be manually configured in Linux, so part of Linux instructions -->
+
+<p><li>
+Khi bạn hoàn thành công việc, hãy chọn tùy chọn menu
+<b>File → Exit</b> để thoát khỏi <em>IntelliJ</em>.
+Lần tiếp theo bạn khởi động <em>IntelliJ</em>, các dự án gần đây của bạn
+sẽ xuất hiện trong màn hình <em>Welcome to IntelliJ IDEA</em> để truy cập nhanh chóng.
+
+</ul>
+
+<p><br>
+
+<!---------------------------------------------------------------------------------------- -->
+
+<TABLE BORDER = 0 CELLPADDING = 6 CELLSPACING = 0 WIDTH = 100%>
+<tr align = "left">
+<td bgcolor = "#4e6994">
+<font size = +0 face = "helvetica" color = "#ffffff">
+&nbsp;&nbsp;&nbsp; 2. &nbsp; Tạo một Chương trình trong IntelliJ
+</table>
+
+<p><br>
+
+Bây giờ bạn đã sẵn sàng viết chương trình Java đầu tiên của mình.
+<em>IntelliJ</em> có nhiều công cụ lập trình chuyên biệt
+bao gồm đánh số dòng, tô sáng cú pháp, khớp ngoặc, tự động thụt đầu dòng,
+tự động định dạng, tự động import, đổi tên biến, và kiểm tra mã liên tục.
+<ul>
+
+<p><li>
+To create a new Java program:
+<ul>
+<p><li> Re-open <em>IntelliJ</em> and the project (if you closed it in the previous step).
+
+<p><br>
+<img src = "images/intellij-welcome-hello.png" width = 500 alt = "Opening an existing project in IntelliJ">
+
+<p><br><li>
+Nhấp vào tên dự án trong thanh bên <em>Project View</em> (bên trái) để nó được tô sáng.<br>
+Nếu bạn không thấy thanh bên <em>Project View</em>,
+hãy chọn <b>LIFT → Project (Ctrl + 1)</b> để bật/tắt nó.
+
+<p><br>
+<img src = "images/intellij-project-folder.png" width = 600 alt = "Clicking the project name in the Project View sidebar">
+<p>
+
+
+<p><li>
+Chọn tùy chọn menu <b>LIFT → New Java Class</b>.
+Khi được nhắc, nhập <b>HelloWorld</b> vào trường <em>Name</em>, sau đó nhấn <b>Return</b>.
+
+
+<p>
+<img src = "images/intellij-new-class.png" width = 250 alt = "Creating a new Java class">
+</ul>
+
+<p><br><li>
+Trong cửa sổ chỉnh sửa chính, hãy hoàn thành chương trình Java
+<code class = "outline">HelloWorld.java</code> chính xác như bên dưới.
+
+<blockquote>
+<table>
+<TR><TD><pre>
+<font color = gray>public class HelloWorld {</font>
+<font color = gray>    public static void main(String[] args) {  </font>
+        System.out.println("Hello, World");
+<font color = gray>    }</font>
+<font color = gray>}</font>
+</pre></td></tr>
+</table>
+</blockquote>
+
+Lưu ý rằng <em>IntelliJ</em> sẽ tự động sinh ra phần boilerplate màu xám nên bạn không cần gõ phần này.
+<!-- có thể kèm theo một khối chú thích đầu tệp của khóa học. -->
+Nếu bạn bỏ sót dù chỉ một dấu chấm phẩy, chương trình sẽ không hoạt động.
+
+
+
+<p><li>
+Khi bạn gõ, <em>IntelliJ</em> sẽ làm nổi bật các thành phần cú pháp khác nhau bằng các màu sắc khác nhau.
+Khi bạn gõ dấu ngoặc trái, <em>IntelliJ</em> sẽ tự động thêm dấu ngoặc phải tương ứng.
+Khi bạn xuống dòng mới, <em>IntelliJ</em> sẽ tự động thụt lề dòng đó.
+
+<p>
+<blockquote>
+<img src = "images/intellij-edit.png" width = 600 alt = "Editing HelloWorld.java">
+</blockquote>
+
+<p><br><li>
+Để lưu tệp, chọn tùy chọn menu <b>File → Save All (Ctrl + S)</b>.
+Khi bạn lưu tệp, <em>IntelliJ</em> sẽ tự động định dạng lại mã nguồn của bạn (nếu cần thiết).
+
+<p><br>
+<div class="infobox-tip">
+<p class="notep1">Mẹo</p>
+<p><em>IntelliJ</em> được cấu hình để tự động lưu các thay đổi bạn thực hiện
+trên các tệp khi xảy ra các sự kiện khác nhau (như biên dịch, thực thi, đóng tệp hoặc project,
+hoặc thoát khỏi IDE).
+Tuy nhiên, chúng tôi vẫn khuyến nghị bạn thường xuyên sử dụng <b>File → Save All (Ctrl + S)</b>
+để tận dụng chức năng tự động định dạng mã nguồn.
+
+</div>
+
+</ul>
+
+<p><br>
+
+<!---------------------------------------------------------------------------------------- -->
+
+
+<TABLE BORDER = 0 CELLPADDING = 6 CELLSPACING = 0 WIDTH = 100%>
+<tr align = "left">
+<td bgcolor = "#4e6994">
+<font size = +0 face = "helvetica" color = "#ffffff">
+&nbsp;&nbsp;&nbsp; 3. &nbsp; Biên dịch và Thực thi Chương trình (từ IntelliJ)
+
+</table>
+
+<p><br>
+
+Bây giờ, đã đến lúc <em>thực thi</em> (hoặc <em>chạy</em>) chương trình của bạn.
+Đây là phần thú vị, nơi máy tính của bạn thực hiện các hướng dẫn
+được chỉ định bởi chương trình của bạn.
+Trước khi làm như vậy, bạn phải <em>biên dịch</em> chương trình của mình thành
+a form more amenable for execution on a computer.
+
+<ul>
+<li>
+Chọn chương trình mà bạn muốn biên dịch và thực thi trong thanh bên <em>Project View</em>. Chương trình đó sẽ xuất hiện trong cửa sổ chỉnh sửa chính.
+
+<li>
+Để <em>biên dịch</em> chương trình của bạn,
+chọn tùy chọn menu
+<b>LIFT → Recompile 'HelloWorld.java' (Ctrl + B)</b>.
+
+<!--
+right-click your program in the  main editor window and select
+<b>Recompile 'HelloWorld.java' (Ctrl + B)</b>.
+-->
+
+Nếu biên dịch thành công, bạn sẽ nhận được thông báo xác nhận
+ở thanh trạng thái (ở dưới cùng).
+
+<p>
+<blockquote>
+<img src = "images/intellij-compilation-good.png" height = 20 alt = "Biên dịch thành công">
+</blockquote>
+<p>
+Nếu biên dịch thất bại, một <em>Recompile panel</em> sẽ xuất hiện ở phía dưới,
+làm nổi bật các lỗi hoặc cảnh báo khi biên dịch.
+Hãy kiểm tra kỹ chương trình của bạn để tìm lỗi chính tả, sử dụng các thông báo lỗi làm hướng dẫn.
+
+<p><li>
+Để <em>thực thi</em> chương trình của bạn,
+chọn tùy chọn menu
+<b>LIFT → Run 'HelloWorld' with Arguments (Ctrl + E)</b>.
+<!--
+right-click your program in the main editor window and select
+<b>Run 'HelloWorld' with Arguments (Ctrl + E)</b>.
+-->
+Vì chương trình này không nhận đối số dòng lệnh nào, hãy nhấn <b>OK</b>.
+
+<p>
+<blockquote>
+<img src = "images/intellij-run-with-arguments.png" width = 350 alt = "Intellij Run with Arguments dialog">
+</blockquote>
+
+<!--
+To <em>execute</em> your program, select the menu option <b>Run → Run...</b>.
+A dialog box should appear.
+Click <b>HelloWorld</b> in the dialog box.<br>
+<font color = lightgray>[We hope to simplify this step (and prompt for
+command-line arguments) with a <b>Run with Arguments</b> plugin.]</font>
+
+<p>
+<blockquote>
+<img src = "images/intellij-run-dialog.png" width = 125 alt = "Intellij Run... dialog">
+</blockquote>
+-->
+
+<p>
+Bạn sẽ thấy đầu ra của chương trình (màu trắng), cùng với thông báo
+rằng chương trình đã kết thúc bình thường (với mã thoát là 0).
+
+<p>
+<blockquote>
+<img src = "images/intellij-execute.png" width = 600 alt = "Executing a Java program in IntelliJ">
+</blockquote>
+
+</ul>
+
+<p><br>
+<div class="infobox-tip">
+<p class="notep1">Mẹo</p>
+<p>Sử dụng menu <b>LIFT</b> để biên dịch và thực thi chương trình của bạn từ <em>IntelliJ</em>.
+Các menu <b>Build</b> và <b>Run</b> cung cấp thêm các tùy chọn cho lập trình viên nâng cao.
+<p>
+Ngoài ra, hãy đảm bảo rằng cửa sổ chỉnh sửa chính đang được chọn trước khi sử dụng menu <b>LIFT</b>
+(ví dụ: bằng cách nhấp vào đoạn mã bạn muốn biên dịch hoặc thực thi).
+</div>
+
+<p><br>
+
+<!---------------------------------------------------------------------------------------- -->
+
+
+<TABLE BORDER = 0 CELLPADDING = 6 CELLSPACING = 0 WIDTH = 100%>
+<tr align = "left">
+<td bgcolor = "#4e6994">
+<font size = +0 face = "helvetica" color = "#ffffff">
+&nbsp;&nbsp;&nbsp; 4. &nbsp; Biên dịch và Thực thi Chương trình (từ dòng lệnh)
+
+</table>
+
+<p><br>
+
+<em>Dòng lệnh (command line)</em> là một cơ chế đơn giản và mạnh mẽ để
+điều khiển các chương trình của bạn (ví dụ: đối số dòng lệnh,
+chuyển hướng tệp, và piping).
+<em>IntelliJ</em> cung cấp một <em>terminal tích hợp</em>
+để dễ dàng truy cập dòng lệnh.
+
+<ul>
+
+<p><li>
+Select the menu option <b>LIFT → Terminal (Alt + 2)</b>.
+
+<!--
+In the editor window containing your program, select the menu option
+<b>LIFT → Open in terminal (Ctrl + T)</b>.
+-->
+
+<p><li>
+Thao tác này sẽ mở một
+<em>cửa sổ terminal Git Bash</em> nơi bạn có thể nhập lệnh.
+Bạn sẽ thấy một <em>dấu nhắc lệnh</em> trông giống như sau:
+
+<p>
+<pre class = "terminal">
+<span class = prompt>~&gt;</span> Active code page: 65001</pre>
+
+<code class = "outline">~/Desktop/hello</code> là thư mục làm việc hiện tại,
+trong đó <code class = "outline">~</code> là ký hiệu viết tắt cho thư mục chính của bạn.
+
+<p><li>
+Để <em>biên dịch</em> chương trình của bạn,
+hãy nhập lệnh <code class = "outline">javac</code> sau.
+Cụ thể, hãy nhập phần văn bản màu vàng xuất hiện trên cùng dòng với dấu nhắc lệnh.
+
+<pre class = "terminal">
+<span class = prompt>~&gt;</span> <span class = command>javac HelloWorld.java</span>
+<span class = prompt>~&gt;</span></pre>
+
+Giả sử rằng tệp <code class = "outline">HelloWorld.java</code> nằm trong thư mục làm việc hiện tại,
+bạn sẽ không thấy bất kỳ lỗi hoặc cảnh báo biên dịch nào.
+
+<p><li>
+Để <em>thực thi</em> chương trình của bạn,
+hãy nhập lệnh <code class = "outline">java</code> sau:
+
+<pre class = "terminal">
+<span class = prompt>~&gt;</span> <span class = command>java HelloWorld</span>
+Hello, World
+</pre>
+
+Bạn sẽ thấy đầu ra của chương trình bên dưới dòng mà bạn vừa nhập lệnh.
+
+<p><br>
+<div class="infobox-tip">
+<p class="notep1">Mẹo</p>
+<p>Thông thường, bạn nên <b>biên dịch từ <em>IntelliJ</em></b>
+(vì <em>IntelliJ</em> sẽ làm nổi bật các dòng có lỗi hoặc cảnh báo khi biên dịch)
+và <b>thực thi từ dòng lệnh</b>
+(vì dòng lệnh giúp bạn dễ dàng nhập đối số dòng lệnh
+và sử dụng chuyển hướng tệp).</p>
+</div>
+
+</ul>
+
+<p><br>
+
+<!---------------------------------------------------------------------------------------- -->
+
+
+<TABLE BORDER = 0 CELLPADDING = 6 CELLSPACING = 0 WIDTH = 100%>
+<tr align = "left">
+<td bgcolor = "#4e6994">
+<font size = +0 face = "helvetica" color = "#ffffff">
+&nbsp;&nbsp;&nbsp; 5. &nbsp; Textbook Libraries (from the command line)
+
+</table>
+
+<p><br>
+
+Để có thể truy cập được các thư viện textbook Java thông qua dòng lệnh,
+bạn sẽ sử dụng các script wrapper của chúng tôi.
+
+<ul>
+
+<p>
+<img style="padding: 0px 0px 0px 10px"
+     src="images/cover-introcs.png"
+     height = 75
+     align = "right">
+<img style="padding: 0px 0px 0px 20px"
+     src="images/cover-java2e.png"
+     height = 75
+     align = "right">
+<li>
+<b>Computer Science: An Interdisciplinary Approach (including COS 126 students).</b>
+The program
+<a href = "https://introcs.cs.princeton.edu/22library/Barnsley.java">Barnsley.java</a>
+uses our <em>standard drawing</em> and <em>standard random</em> libraries
+in <code class = "outline">stdlib.jar</code> to draw a
+<a href = "https://en.wikipedia.org/wiki/Barnsley_fern">Barnsley fern</a>.
+<ul>
+<p><li>
+First download <a href = "https://introcs.cs.princeton.edu/22library/Barnsley.java">Barnsley.java</a>.
+<p><li>
+Then, use <em>Windows Explorer</em> to move it
+to a project folder (such as <code class = "outline">hello</code>).
+<p><li>
+Finally, to <em>compile</em> and <em>execute</em> it,
+type the following commands in the terminal:
+
+<pre class = "terminal">
+<span class = prompt>~&gt;</span> <span class = command>ls</span>
+Barnsley.java   COS 126.iml   HelloWorld.java   logo.png
+<span class = prompt>~&gt;</span> <span class = command>javac-introcs Barnsley.java</span>
+<span class = prompt>~&gt;</span> <span class = command>java-introcs Barnsley 10000</span>
+</pre>
+</ul>
+
+When you execute the program, a <em>standard drawing</em> window will appear
+and an image like this one will be generated, one point at a time:
+
+<p>
+<blockquote>
+<img src = "images/barnsley.png" width = 300 align = middle alt = "Barnsley fern">
+</blockquote>
+
+<p><br>
+To get your command prompt back, close the <em>standard drawing</em> window.
+
+
+<p>
+<img style="padding: 0px 0px 0px 20px"
+     src="images/cover-algs4.png"
+     height = 75
+     align = "right">
+</center>
+<li>
+<b>Algorithms, 4th Edition (including COS 226 students).</b>
+Chương trình
+<a href = "https://algs4.cs.princeton.edu/code/CollidingDisks.java">CollidingDisks.java</a>
+sử dụng nhiều thư viện trong <code class = "outline">algs4.jar</code>
+để mô phỏng chuyển động của <em>n</em> đĩa tuân theo các quy luật
+va chạm đàn hồi.
+<ul>
+
+<p><li>
+Đầu tiên, tải về
+<a href = "https://algs4.cs.princeton.edu/code/CollidingDisks.java">CollidingDisks.java</a>.
+
+<p><li>
+Sau đó, sử dụng <em>Windows Explorer</em> để di chuyển tệp này
+vào một thư mục project (ví dụ <code class = "outline">percolation</code>).
+
+<p><li>Cuối cùng, để <em>biên dịch</em> và <em>thực thi</em> chương trình,
+hãy nhập các lệnh sau trong terminal:
+
+<pre class = "terminal">
+<span class = prompt>~&gt;</span> <span class = command>ls</span>
+CollidingDisks.java   COS 226.iml   WELCOME.txt   logo.png
+<span class = prompt>~&gt;</span> <span class = command>javac-algs4 CollidingDisks.java</span>
+<span class = prompt>~&gt;</span> <span class = command>java-algs4 CollidingDisks 20</span>
+</pre>
+</ul>
+
+<p>
+Khi bạn thực thi chương trình, một cửa sổ <em>standard drawing</em> sẽ xuất hiện
+với hoạt ảnh của 20 đĩa va chạm nhau.
+
+
+<p>
+<blockquote>
+<video controls="controls" width="300"
+       name="20 collding discs"
+       src="videos/colliding-discs.mov">
+Your browser does not support the video tag.
+</video>
+</blockquote>
+
+
+<p>
+Để lấy lại dấu nhắc lệnh, hãy đóng cửa sổ <em>standard drawing</em>.
+
+<p><br>
+
+<!---------------------------------------------------------------------------------------- -->
+
+<TABLE BORDER = 0 CELLPADDING = 6 CELLSPACING = 0 WIDTH = 100%>
+<tr align = "left">
+<td bgcolor = "#4e6994">
+<font size = +0 face = "helvetica" color = "#ffffff">
+&nbsp;&nbsp;&nbsp; Câu hỏi Thường gặp
+</table>
+
+<p><br>
+<a class="button" id="TJK_ToggleON">Expand All</a>
+<a class="button" id="TJK_ToggleOFF">Collapse All</a>
+</p>
+
+<br>
+
+<dl id="TJK_DL">
+
+<!---------------------------------------------------------------------------------------- -->
+<!--  lift-java.exe installer FAQ                                                          -->
+<!---------------------------------------------------------------------------------------- -->
+
+<div class = "faq-header">
+Installer FAQ - Câu hỏi thường gặp về Trình cài đặt
+</div>
+
+<dt>
+Tôi đã cài đặt <em>IntelliJ</em> và Java bằng
+<em>lift-java-installer.exe</em> vào học kỳ hoặc năm trước.
+Tôi có nên cài đặt lại trong học kỳ này không?
+</dt>
+<dd>
+Có. Trình cài đặt này bao gồm <em>IntelliJ</em>
+và Java 11.
+Trình cài đặt cũ có thể đã sử dụng phiên bản cũ hơn của
+<em>IntelliJ</em> hoặc Java. Hãy chắc chắn gỡ cài đặt phiên bản cũ trước khi tiếp tục.
+</dd>
+
+<!--
+<dt>
+I previously used either the <em>introcs.exe</em> or <em>algs4.exe</em> installer.
+Should I use <em>lift-java-installer.exe</em>?
+</dt>
+<dd>
+Yes. This installer includes <em>IntelliJ</em>
+and Java 11 (instead of <em>DrJava</em> and Java 7).
+</dd>
+-->
+
+<dt>
+Tôi đã làm hỏng một số cài đặt <em>IntelliJ</em> của mình.
+Tôi có thể chạy lại trình cài đặt để khôi phục các cài đặt này không?
+</dt>
+<dd>
+Có.
+Tuy nhiên, cách đúng để cài đặt lại phần mềm trên Windows là gỡ cài đặt hoàn toàn rồi cài đặt lại.
+Vì vậy, trước tiên hãy gỡ cài đặt phần mềm; sau đó chạy <em>lift-java-installer.exe</em>.
+
+
+<dt>
+Làm thế nào để tôi gỡ cài đặt phần mềm?
+</dt>
+<dd>
+<ul>
+
+<p><li> Để gỡ cài đặt tất cả,
+hãy điều hướng đến <code class = outline>C:\Program Files\LIFT-CS</code>
+và chạy trình gỡ cài đặt <code class = "outline">unins000.exe</code>.
+
+<p><li>Để chỉ gỡ cài đặt <em>IntelliJ</em>, hãy điều hướng đến
+<code class = outline>C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2024.2\bin</code>;
+nhấp chuột phải vào trình gỡ cài đặt <code class = outline>Uninstall.exe</code>;
+và chọn <em>Run as administrator</em>.
+</ul>
+</dd>
+
+
+<!--
+It will re-install and re-configure
+<em>OpenJDK 11</em>, <em>IntelliJ</em>,
+<em>Git Bash</em>, <em>Xming</em>,
+<em>SpotBugs</em>, <em>PMD</em>, <em>Checkstyle</em>, our textbook libraries,
+and wrapper scripts.
+-->
+</dd>
+
+<dt>
+Tôi có thể chạy trình cài đặt bằng <em>Run as administrator</em> không?
+</dt>
+
+<dd>
+Không. Bạn phải chạy trình cài đặt từ tài khoản mà bạn muốn lập trình,
+và tài khoản đó phải có quyền Administrator.
+Nếu bạn sử dụng <em>Run as administrator</em>,
+trình cài đặt sẽ không biết danh tính người dùng gốc (vì vậy không thể sao chép
+các tệp vào thư mục chính của người dùng gốc).
+</dd>
+
+<dt>
+Trình cài đặt bị lỗi. Làm thế nào để tôi kiểm tra nguyên nhân?
+</dt>
+<dd>
+Kiểm tra các tệp log của trình cài đặt tại
+<code class = "outline">%TEMP%\LIFT-CS\</code>
+và
+<code class = "outline">%TEMP%\Setup Log YYYY-MM-DD #NNN.txt</code>,
+trong đó
+<code class = "outline">%TEMP%</code> thường là
+<code class = "outline">C:\Users\&lt;Username&gt;\AppData\Local\Temp</code>,
+<code class = "outline">YYYY-MM-DD</code> là ngày hiện tại,
+và <code class = "outline">NNN</code> là một số nguyên.
+</dd>
+
+<dt>
+Máy tính của tôi đang chạy Windows 8. Có quá cũ không?
+</dt>
+<dd>
+Có.
+<em>IntelliJ 2024.2</em> yêu cầu Windows 10 hoặc 11.
+</dd>
+
+
+<dt>
+Trình cài đặt sẽ mất bao lâu để hoàn tất cài đặt?
+</dt>
+<dd>
+Sau khi tải xuống, quá trình cài đặt chỉ mất vài phút.
+Thanh tiến trình sẽ không di chuyển trong khi cài đặt thành phần <em>IntelliJ</em>,
+vì vậy hãy kiên nhẫn chờ đợi.
+</dd>
+
+
+<dt>
+Trình cài đặt <em>lift-java-installer.exe</em> thực hiện những gì?
+</dt>
+<dd>
+Nói ngắn gọn, nó sẽ cài đặt và cấu hình
+<em>Java</em>, <em>IntelliJ</em>,
+<em>Git Bash</em>,
+<em>Xming</em>,
+<em>SpotBugs</em>,
+<em>PMD</em>,
+<em>Checkstyle</em>,
+và các thư viện sách giáo khoa,
+cùng với các công cụ dòng lệnh đi kèm.
+Dưới đây là danh sách chi tiết hơn:
+
+<ul>
+
+<p><li> Cài đặt
+<a href = "https://adoptium.net/temurin/releases/?version=11">Temurin OpenJDK 11.0.20</a>
+và thêm nó vào PATH.
+
+<p><li> Cài đặt
+<a href = "https://www.jetbrains.com/idea/download/#section=windows">IntelliJ 2024.2</a>
+với các thiết lập người dùng đã được tùy chỉnh.
+
+<p><li> Cài đặt <a href = "https://git-scm.com/downloads">Git Bash 2.36.1</a> và
+thêm nó vào PATH.
+
+<p><li> Cài đặt <a href = "https://sourceforge.net/projects/xming">Xming 6.9.0.31</a>.
+
+<p><li>Cài đặt các công cụ dòng lệnh sau cho Java:
+
+<ul>
+
+<p><li> Các thư viện sách giáo khoa
+<a href = "https://introcs.cs.princeton.edu/code/stdlib.jar">stdlib.jar</a> và
+<a href = "https://algs4.cs.princeton.edu/code/algs4.jar">algs4.jar</a>.
+
+<p><li>Các script wrapper cho Java, bao gồm
+<a href = "../javac-algs4">javac-algs4</a> và <a href = "../java-algs4">java-algs4</a>.
+
+<p><li></li>
+<a href = "https://spotbugs.github.io">SpotBugs 4.8.4</a>;
+tệp cấu hình SpotBugs của chúng tôi <a href = "../spotbugs.xml">spotbugs.xml</a>;
+và script wrapper <a href = "../spotbugs">spotbugs</a>.
+
+<p><li></li>
+<a href = "https://pmd.github.io/pmd-6.34.0/">PMD 6.34.0</a>;
+tệp cấu hình PMD của chúng tôi <a href = "../pmd.xml">pmd.xml</a>;
+và script wrapper <a href = "../pmd">pmd</a>.
+
+<p><li>
+<a href = "http://checkstyle.sourceforge.net/">Checkstyle 10.12.1</a>;
+các tệp cấu hình khác nhau
+(<a href = "../checkstyle-cos126.xml">checkstyle-cos126.xml</a>,
+<a href = "../checkstyle-cos226.xml">checkstyle-cos226.xml</a>,
+<a href = "../checkstyle-coursera.xml">checkstyle-coursera.xml</a>, và
+<a href = "../checkstyle-suppressions.xml">checkstyle-suppressions.xml</a>);
+các kiểm tra tùy chỉnh <a href = "../checkstyle-lift.jar">checkstyle-lift.jar</a>;
+và script wrapper <a href = "../checkstyle">checkstyle</a>.
+</ul>
+</ul>
+</dd>
+
+
+<dt>
+Phần mềm này được cấp phép như thế nào?
+</dt>
+<dd>
+Tất cả phần mềm đi kèm đều được cấp phép theo các giấy phép mã nguồn mở khác nhau.
+<ul>
+
+<p><li><em>IntelliJ IDEA Community Edition</em> được cấp phép theo
+<a href = "https://www.apache.org/licenses/LICENSE-2.0.html">Apache License, Version 2.0</a>.
+</p>
+
+<p><li><em>OpenJDK 11</em> được cấp phép theo
+<a href = "https://openjdk.java.net/legal/gplv2+ce.html">GNU General Public License,
+phiên bản 2, với Classpath Exception</a>.
+</p>
+
+<p><li><em>SpotBugs</em> được cấp phép theo
+<a href = "https://www.gnu.org/licenses/lgpl.html">GNU Lesser Public License, Phiên bản 2.1</a>.
+</p>
+
+<p><li><em>Checkstyle</em> được cấp phép theo
+<a href = "https://checkstyle.sourceforge.io/license.html">GNU Lesser Public License, Phiên bản 2.1</a>.
+</p>
+
+<p>PMD được cấp phép theo
+<a href = "https://pmd.github.io/latest/license.html">giấy phép kiểu BSD</a>.
+</p>
+
+<p><li><em>Git Bash</em> được cấp phép theo
+<a href = "https://github.com/git-for-windows/git/wiki/FAQ#licenses">GNU General Public License,
+phiên bản 2</a>.
+</p>
+
+<p><li><em>Xming</em> được cấp phép theo
+<a href = "https://en.wikipedia.org/wiki/MIT_License">MIT X License</a>.
+</p>
+
+<p><li><em>stdlib.jar</em> và <em>algs4.jar</em>
+được cấp phép theo
+<a href = "https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License, Phiên bản 3</a>.
+</p>
+
+
+</ul>
+</dd>
+
+
+<!-- sha256sum lift-java.exe -->
+<dt>
+Mã băm sha256sum của <em>lift-java-installer.exe</em> là gì?
+</dt>
+<dd>
+<code class = "outline">9ce7fdf94baf63357663a2cd1ac769f8f76ee77aaef154630df62fe177969278</code>
+</dd>
+
+<dt>
+Tôi có thể chạy trình cài đặt từ dòng lệnh không?
+</dt>
+<dd>
+Có, <em>lift-java-installer.exe</em> chấp nhận các
+<a href = "http://www.jrsoftware.org/ishelp/index.php?topic=setupcmdline">tham số dòng lệnh tùy chọn</a>,
+hữu ích cho quản trị viên hệ thống.
+<!-- Type <code class = "outline">lift-java-installer.exe /HELP</code>
+for a list of available options.
+-->
+</dd>
+
+<!---------------------------------------------------------------------------------------- -->
+<!--  Java FAQ                                                                             -->
+<!---------------------------------------------------------------------------------------- -->
+
+<!---------------------------------------------------------------------------------------- -->
+<!--  Java FAQ                                                                             -->
+<!---------------------------------------------------------------------------------------- -->
+
+<div class = "faq-header">
+Java FAQ - Câu hỏi thường gặp về Java
+</div>
+
+<dt>
+Tôi có thể sử dụng phiên bản Java khác ngoài Temurin OpenJDK 11 không?
+</dt>
+<dd>
+Có.
+<!-- You may use any version of Java 8 or newer from either Oracle or OpenJDK. -->
+Bạn có thể sử dụng bất kỳ phiên bản Java 11 trở lên nào từ Oracle hoặc OpenJDK.
+Tuy nhiên, nếu làm vậy, bạn sẽ cần tự cấu hình Platform SDK và Project SDK
+trong <em>IntelliJ</em> qua <em>File → Project Structure</em>.
+Chúng tôi khuyến nghị sử dụng các phiên bản hỗ trợ dài hạn (LTS): Java 11 và Java 17.
+</dd>
+
+<dt>
+Làm thế nào để kiểm tra phiên bản Java đã cài đặt (và vị trí cài đặt)?
+</dt>
+<dd>
+Nhập các lệnh sau trong terminal:
+
+<pre class = "terminal">
+<span class = prompt>~&gt;</span> <span class = command>javac -version</span>
+javac 11.0.20
+<span class = prompt>~&gt;</span> <span class = command>java -version</span>
+openjdk version "11.0.20" 2022-04-19
+OpenJDK Runtime Environment Temurin-11.0.20+8 (build 11.0.20+8)
+OpenJDK 64-Bit Server VM Temurin-11.0.20+8 (build 11.0.20+8, mixed mode)
+
+<span class = prompt>~&gt;</span> <span class = command>which javac</span>
+c/Program Files/Eclipse Adoptium/jdk-11.0.20.10-hotspot/bin/javac
+
+<span class = prompt>~&gt;</span> <span class = command>which java</span>
+c/Program Files/Eclipse Adoptium/jdk-11.0.20.10-hotspot/bin/java
+</pre>
+
+Điều quan trọng là số phiên bản Java phải khớp nhau và bạn thấy số
+<code class = "outline">11</code>,
+còn các thông tin khác không quá quan trọng.
+</dd>
+
+<!---------------------------------------------------------------------------------------- -->
+<!--  IntelliJ FAQ                                                                         -->
+<!---------------------------------------------------------------------------------------- -->
+
+<!---------------------------------------------------------------------------------------- -->
+<!--  IntelliJ FAQ                                                                         -->
+<!---------------------------------------------------------------------------------------- -->
+
+<div class = "faq-header">
+IntelliJ FAQ - Câu hỏi thường gặp về IntelliJ
+</div>
+
+<dt>
+Phiên bản tùy chỉnh của <em>IntelliJ</em> này khác gì so với bản tiêu chuẩn?
+</dt>
+<dd>
+<em>IntelliJ</em>
+là một môi trường phát triển tích hợp (IDE) mạnh mẽ cấp công nghiệp,
+phù hợp cho các lập trình viên chuyên nghiệp.
+Trình cài đặt sẽ cấu hình các tùy chọn người dùng của bạn để làm cho nó
+phù hợp hơn với người mới bắt đầu:
+
+<ul>
+<p><li>Vô hiệu hóa tất cả plugin tích hợp sẵn ngoại trừ <em>Terminal</em> và <em>JUnit</em>.
+     Cài đặt các plugin <em>SpotBugs</em>, <em>Checkstyle-IDEA</em>,
+     <em>Run-with-Arguments</em>,
+     <em>Save-Actions</em>,
+     và <em>Archive browser</em>.
+<p><li>Loại bỏ hoặc giảm thiểu các popup khác nhau
+     (bóng đèn, thu gọn mã, breadcrumbs, đánh dấu lề, thông báo, gợi ý tham số).
+<p><li>Đơn giản hóa menu và thanh công cụ, ẩn các tùy chọn nâng cao.
+<p><li>Vô hiệu hóa live templates và postfix completion.
+<p><li>Áp dụng giao diện màu <em>Obsidian Black</em>.
+<p><li>Tự động cấu hình Java khi cài đặt.
+<p><li>Thêm một số phím tắt.
+</ul>
+
+
+<p>
+Các thư mục project dành riêng cho khóa học sẽ thực hiện thêm một số tùy chỉnh:
+<ul>
+<p><li>Đơn giản hóa tính năng tự động hoàn thành để chỉ hiển thị các thư viện liên quan
+(như <code class = "outline">java.lang</code>,
+<code class = "outline">java.util</code>, và <code class = "outline">algs4.jar</code>).
+<p><li>Cấu hình <em>SpotBugs</em> và <em>Checkstyle</em> với các quy tắc riêng cho từng khóa học.
+<p><li>Cung cấp các thư viện riêng cho từng khóa học (như <code class = "outline">algs4.jar</code>).
+<p><li>Bật tính năng tự động định dạng mã nguồn khi lưu.
+<p><li>Bật tính năng tự động import các thư viện Java.
+</ul>
+</dd>
+
+<!-- Project SDK must be manually configured in Linux, so part of Linux instructions -->
+<dt>
+Làm thế nào để tôi cấu hình thủ công Platform SDK và Project SDK trong <em>IntelliJ</em>?
+</dt>
+<dd>
+Trình cài đặt sẽ tự động cấu hình Platform SDK.
+Để cấu hình thủ công,
+<ul>
+<p><li> Điều hướng đến <em>File → Project Structure → Platform Settings → SDKs</em>.
+<p><li> Nhấp vào biểu tượng <em>+</em> (góc trên bên trái) để thêm SDK mới.
+<p><li> Chọn vị trí SDK. Vị trí điển hình cho Java SDK trên
+Windows là <code class = outline>C:\Program Files\Java\jdk11.0.20</code>.
+<p><li> Sử dụng tên viết tắt mà <em>IntelliJ</em> gợi ý
+(ví dụ: 11 cho phiên bản 11.0.20).
+</ul>
+<p>Để cấu hình thủ công Project SDK,
+<ul>
+<p><li> Điều hướng đến <em>File → Project Structure → Project Settings → Project</em>.
+<p><li> Chọn Project SDK mong muốn từ danh sách thả xuống.
+<p><li> Đảm bảo sử dụng 8 cho <em>Project language level</em>, vì hệ thống chấm tự động của chúng tôi
+hiện chỉ hỗ trợ các tính năng của Java 8.
+</ul>
+</dd>
+
+
+
+<!--
+<p>
+<img src = "images/intellij-project-sdk.png" width = 700 alt = "Configuring the Project SDK in IntelliJ">
+<p>
+-->
+
+<dt>
+Những tùy chọn menu <em>IntelliJ</em> nào là quan trọng nhất cần nhớ?
+</dt>
+<dd>
+Dưới đây là những tùy chọn quan trọng nhất (và phím tắt của chúng).
+<ul>
+<p><li><em>LIFT → New Java Class</em> (Ctrl + N).&nbsp; Tạo một lớp Java mới.
+<p><li><em>LIFT → Recompile</em> (Ctrl + B).&nbsp; Biên dịch chương trình hiện tại.
+<p><li><em>LIFT → Run with Arguments</em> (Ctrl + E).&nbsp; Chạy chương trình hiện tại với đối số dòng lệnh.
+<!-- <p><li><em>LIFT → Open in Terminal</em> (Ctrl + T).&nbsp; Mở một tab <em>Terminal</em> mới. -->
+<p><li><em>File → Save All</em> (Ctrl + S).&nbsp; Lưu (và định dạng lại) tất cả các tệp đang mở.
+<p><li><em>View → Tool Windows  → Project</em> (Alt + 1).&nbsp; Hiện/ẩn thanh bên <em>Project View</em>.
+<p><li><em>View → Tool Windows  → Terminal</em> (Alt + 2).&nbsp; Hiện/ẩn cửa sổ <em>Terminal</em>.
+</ul>
+</dd>
+
+<dt>
+Có ký tự đặc biệt nào cần tránh khi đặt tên project hoặc tệp trong <em>IntelliJ</em> không?
+</dt>
+<dd>
+Không sử dụng dấu chấm than <code class = "outline">!</code> làm ký tự cuối cùng
+<!-- 'exclamation point' is preferred in American English but
+     'exclamation mark' is official name of ASCII/Unicode character -->
+trong tên thư mục project (hoặc bất kỳ tên thư mục nào trên đường dẫn đến thư mục project);
+điều này sẽ gây lỗi cho cả <em>IntelliJ</em> và <em>Checkstyle</em>.
+</dd>
+
+
+
+</dd>
+
+<dt></dt>
+Làm thế nào để tôi tạo một project mới trong <em>IntelliJ</em>?
+</dt>
+<dd>
+Nếu bạn muốn kế thừa tất cả các thuộc tính của một project hiện có,
+<ul>
+<p><li> Sử dụng <em>Windows Explorer</em> để sao chép thư mục project,
+đặt tên theo ý muốn của bạn.
+
+<p><li> Xóa bất kỳ tệp nào không mong muốn.
+<p><li> Hãy chắc chắn giữ lại
+tệp <code class = "outline">.iml</code> (định nghĩa project),
+thư mục con <code class = "outline">.idea</code> (chứa
+các thiết lập khóa học của <em>IntelliJ</em>), và
+thư mục con <code class = "outline">.lift</code> (chứa các thư viện khóa học).
+</ul>
+<p>
+Để tạo một project mới hoàn toàn, bạn có thể sử dụng tùy chọn <em>Create New Project</em> từ
+<em>Welcome screen</em>. Tuy nhiên, chúng tôi không khuyến nghị cách này cho người mới học lập trình.
+</dd>
+
+<dt>
+Tôi có thể sử dụng phiên bản <em>IntelliJ</em> mới hơn 2024.2 không?
+</dt>
+<dd>
+Có, tuy nhiên nếu là 2024.3 (hoặc cao hơn),
+bạn sẽ cần chuyển đổi các thiết lập người dùng của mình.
+</dd>
+
+<dt>
+Làm thế nào để tôi khôi phục lại các thiết lập gốc của IntelliJ
+(thay vì các thiết lập rút gọn thân thiện với người mới)?
+</dt>
+<dd>
+<ul>
+<p><li>Để khôi phục menu và thanh công cụ: <em>Preferences → Appearances & Behavior → Menus and Toolbars → Restore All Defaults</em>.
+<p><li>Để khôi phục tất cả thiết lập: <em>Help → Find Action → Restore Default Settings</em>.
+</ul>
+</dd>
+
+<!--
+<dt>
+Can I use an IDE other than <em>IntelliJ</em>?
+</dt>
+<dd>
+Yes. You can use another IDE (such as Sublime or Eclipse) but
+you will have to configure the IDE properties yourself (such as the classpath).
+</dd>
+-->
+
+<!---------------------------------------------------------------------------------------- -->
+<!--  Lift CLI FAQ                                                                         -->
+<!---------------------------------------------------------------------------------------- -->
+
+<!---------------------------------------------------------------------------------------- -->
+<!--  Lift CLI FAQ                                                                         -->
+<!---------------------------------------------------------------------------------------- -->
+
+<div class = "faq-header">
+Câu hỏi thường gặp về Command-line / Terminal tích hợp
+</div>
+
+<dt>
+Khi tôi biên dịch hoặc thực thi một chương trình từ dòng lệnh sử dụng một trong các thư viện sách giáo khoa, tôi nhận được lỗi không tìm thấy thư viện. Làm sao để khắc phục?
+</dt>
+<dd>
+Hãy đảm bảo rằng bạn đang sử dụng đúng script wrapper,
+chẳng hạn như <code class = "outline">javac-algs4</code>
+hoặc <code class = "outline">java-algs4</code>.
+</dd>
+
+<dt>Khi tôi mở terminal tích hợp trong IntelliJ, IntelliJ hoặc là khởi động sai phiên bản Bash (như WSL Bash hoặc MinGW Bash) hoặc xuất hiện thông báo lỗi (ví dụ "couldn't create PTY error"). Làm sao để khắc phục?</dt>
+<dd>Đi tới <em>File → Settings → Tools → Terminal → Shell path</em>
+và thay <code class = outline>bash</code> bằng
+<code class = outline>"C:\Program Files\Git\bin\bash"</code>.
+</dd>
+
+<dt>Tôi gặp lỗi khi cố gắng thực thi một script wrapper (như
+<code class = outline>javac-algs4</code> hoặc <code class = outline>java-introcs</code>).
+Làm sao để khắc phục?</dt>
+<dd>IntelliJ có thể đang khởi động sai shell (như <em>Command Prompt</em>,
+<em>PowerShell</em>, <em>WSL Bash</em> hoặc <em>MinGW Bash</em>).
+Để cấu hình lại sử dụng <em>Git Bash</em>, hãy làm theo hướng dẫn ở câu hỏi trước.
+</dd>
+
+<dt>Các ký tự quốc tế bị hiển thị sai trong terminal. Nguyên nhân là gì?</dt>
+<dd>Khi bạn khởi động terminal, bạn nên thấy thông báo <code>Activation code page: 65001</code>,
+giúp cấu hình terminal hiển thị ký tự Unicode bằng UTF-8.
+Nếu bạn không thấy thông báo này, có thể bạn đang dùng sai phiên bản Bash (như WSL Bash hoặc MinGW Bash).
+Để cấu hình lại sử dụng Git Bash, hãy làm theo hướng dẫn ở câu hỏi trước.
+</dd>
+
+
+<dt>
+Tôi nên cấu hình Bash như thế nào?
+</dt>
+<dd>
+Nếu bạn làm theo hướng dẫn của chúng tôi, các script wrapper (như
+<a href = "../javac-algs4"><code class = outline>javac-algs4</code></a> và
+<a href = "../java-algs4"><code class = outline>java-algs4</code></a>)
+đã sẵn sàng để sử dụng.
+<p>
+Trình cài đặt tự động của chúng tôi sẽ tùy chỉnh dòng lệnh bằng cách sao chép ba tệp cấu hình sau:
+<a href = "../.bashrc"><code class = outline>.bashrc</code></a>,
+<a href = "../.bash_profile"><code class = outline>.bash_profile</code></a>, và
+<a href = "../.inputrc"><code class = outline>.inputrc</code></a>.
+<!--
+-->
+</dd>
+
+
+<dt>
+Làm thế nào để tôi dừng một chương trình đang chạy vòng lặp vô hạn?
+</dt>
+<dd>
+Nhấn tổ hợp phím <code class = outline>Ctrl-C</code>.
+
+
+<dt>
+Làm thế nào để tôi nhập ký hiệu EOF để báo hiệu kết thúc dữ liệu đầu vào chuẩn?
+</dt>
+<dd>
+Trên macOS và Linux, nhấn <code class = outline>Enter</code> <code class = outline>Ctrl-D</code>.
+Trên Windows, nhấn <code class = outline>Enter</code> <code class = outline>Ctrl-Z</code> <code class = outline>Enter</code>,
+kể cả khi sử dụng Git Bash.
+
+</dd>
+
+<dt>
+Làm thế nào để tôi chạy <em>SpotBugs</em>, <em>PMD</em> và <em>Checkstyle</em> từ dòng lệnh?
+</dt>
+<dd>
+Trình cài đặt đã bao gồm các script wrapper để đơn giản hóa quá trình này.
+
+
+<ul>
+<p><li>
+Để chạy <em>SpotBugs</em> 4.8.4, hãy nhập lệnh sau trong terminal:
+
+<pre class = "terminal">
+<span class = prompt>~&gt;</span> <span class = command>spotbugs HelloWorld.class</span>
+Đang chạy spotbugs trên HelloWorld.class:
+</pre>
+
+Tham số truyền vào phải là danh sách các tệp <code class = "outline">.class</code>.
+Đây là danh sách
+<a href = "https://spotbugs.github.io/#bug-descriptions">mô tả lỗi</a>.
+
+<p><li>
+Để chạy <em>PMD</em> 6.34.0, hãy nhập lệnh sau trong terminal:
+
+<pre class = "terminal">
+<span class = prompt>~&gt;</span> <span class = command>pmd HelloWorld.java</span>
+Đang chạy pmd trên HelloWorld.java:
+</pre>
+
+Tham số truyền vào có thể là một tệp <code class = "outline">.java</code> hoặc
+một thư mục chứa một hoặc nhiều tệp <code class = "outline">.java</code>.
+Đây là danh sách
+<a href = "https://pmd.github.io/pmd-6.34.0/pmd_rules_java.html">các mẫu lỗi</a>.
+
+
+
+<p><li>
+Để chạy <em>Checkstyle</em> 10.12.1, hãy nhập một trong các lệnh sau trong terminal,
+tùy thuộc vào bạn là sinh viên COS 126, COS 226 hay Coursera:
+
+<pre class = "terminal">
+<span class = prompt>~&gt;</span> <span class = command>checkstyle -cos126 HelloWorld.java</span>
+Đang chạy checkstyle trên HelloWorld.java:
+
+<span class = prompt>~&gt;</span> <span class = command>checkstyle -cos226 HelloWorld.java</span>
+Đang chạy checkstyle trên HelloWorld.java:
+
+<span class = prompt>~&gt;</span> <span class = command>checkstyle -coursera HelloWorld.java</span>
+Đang chạy checkstyle trên HelloWorld.java:
+</pre>
+
+Tham số truyền vào phải là danh sách các tệp <code class = "outline">.java</code>.
+Đây là danh sách
+<a href = "http://checkstyle.sourceforge.net/checks.html">các kiểm tra có sẵn</a>.
+
+
+</ul>
+</dd>
+
+<dt>
+Tôi có thể sử dụng Command Prompt, PowerShell hoặc Windows Subsystem for Linux thay vì Git Bash for Windows không?
+</dt>
+<dd>
+Chúng tôi khuyến nghị mạnh mẽ sử dụng Git Bash. Ví dụ, các lệnh
+<code class = "outline">javac-algs4</code> và
+<code class = "outline">checkstyle-algs4</code>
+chỉ hoạt động trong Git Bash. Nếu bạn muốn sử dụng shell khác, bạn sẽ cần tự cấu hình.
+</dd>
+
+<dt>
+Những lệnh kiểu Linux nào có sẵn trong Git Bash for Windows?
+</dt>
+<dd>
+Đây là danh sách <a href = "bash.builtin.commands.txt">các lệnh tích hợp của Bash</a>
+và đây là <a href = "git.bash.commands.txt">các lệnh bên ngoài</a>
+trong <code class = "outline">C:\Program Files\Git\usr\bin</code>.
+</dd>
+
+</dl>
+
+</body>
+</html>
