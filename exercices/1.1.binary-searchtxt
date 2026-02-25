@@ -1,0 +1,49 @@
+### 10 câu hỏi về Tìm kiếm nhị phân
+
+**Tìm kiếm nhị phân chạy hiệu quả trên cấu trúc dữ liệu nào?**
+a) Một mảng ngẫu nhiên (chưa được sắp xếp).
+b) Một danh sách liên kết.
+*c) Một mảng đã được sắp xếp.
+d) Một hàng đợi (queue).
+
+**Thuật toán tìm kiếm nhị phân hoạt động bằng cách nào để tìm một phần tử (khóa) trong mảng?**
+a) Duyệt qua từng phần tử từ đầu đến cuối mảng.
+b) So sánh khóa với phần tử đầu tiên của mảng.
+*c) Liên tục chia đôi khoảng tìm kiếm cho đến khi tìm thấy khóa hoặc khoảng trống rỗng.
+d) Sử dụng hai vòng lặp lồng nhau để kiểm tra tất cả các cặp phần tử.
+
+**Khi khóa cần tìm được so sánh với phần tử ở giữa (`a[mid]`) và nhỏ hơn phần tử này, thuật toán sẽ làm gì tiếp theo?**
+a) Dừng lại và trả về -1.
+b) Tìm kiếm ở nửa bên phải của khoảng.
+*c) Tìm kiếm ở nửa bên trái của khoảng cho đến  phần tử có chỉ số mid - 1.
+d) Tiếp tục tìm kiếm trong toàn bộ mảng ban đầu.
+
+**Bậc tăng trưởng thời gian chạy của thuật toán tìm kiếm nhị phân là gì?**
+a) Tuyến tính (N)
+*b) Lôgarit (log N)
+c) Bậc hai (N^2)
+d) N log N
+
+**Hiệu suất của tìm kiếm nhị phân có ý nghĩa gì đối với việc xử lý các bài toán lớn?**
+a) Nó quá chậm để sử dụng cho dữ liệu lớn.
+b) Hiệu suất của nó phụ thuộc vào tốc độ của máy tính.
+*c) Nó rất hiệu quả vì chỉ cần kiểm tra một vài phần tử so với kích thước mảng, làm cho nó khả thi cho dữ liệu lớn.
+d) Nó chỉ hoạt động tốt cho các mảng nhỏ.
+
+**Khi nào thì quá trình tìm kiếm nhị phân kết thúc?**
+a) Khi vòng lặp đã chạy hết số lần tối đa.
+b) Khi khoảng tìm kiếm đã được chia đôi 10 lần.
+*c) Khi khóa được tìm thấy hoặc khi khoảng tìm kiếm trở nên trống rỗng.
+d) Khi khoảng tìm kiếm chỉ gồm 1 phần tử a[0].
+
+**Nếu một mảng có 16 phần tử, số lần so sánh tối đa mà thuật toán tìm kiếm nhị phân phải thực hiện để tìm một phần tử là bao nhiêu?**
+a) 16
+b) 8
+*c) 5 (lg(16) + 1 = 4 + 1)
+d) 4
+
+**Lý do chính để tìm kiếm nhị phân được coi là hiệu quả là gì?**
+a) Nó không sử dụng nhiều bộ nhớ.
+b) Nó không cần sắp xếp mảng.
+c) Nó luôn tìm thấy phần tử được yêu cầu.
+*d) Mỗi lần lặp, nó loại bỏ khoảng một nửa số phần tử còn lại khỏi tập hợp tìm kiếm.

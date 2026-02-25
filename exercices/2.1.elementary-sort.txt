@@ -1,0 +1,131 @@
+Chắc chắn rồi! Dưới đây là 20 câu hỏi trắc nghiệm (multiple-choice) về **Selection Sort** và **Insertion Sort** ở định dạng Markdown để bạn dễ dàng sao chép.
+
+---
+
+## 20 Câu Hỏi Trắc Nghiệm: Selection Sort và Insertion Sort
+
+### Selection Sort (Sắp xếp chọn)
+
+1.  **Trong thuật toán Selection Sort, ở mỗi lần lặp thứ i, hành động chính là gì?**
+    * A. Đổi chỗ phần tử ở vị trí i với phần tử i+1 nếu chúng không đúng thứ tự.
+    * B. Chèn phần tử ở vị trí i vào vị trí thích hợp trong mảng con đã sắp xếp.
+    * **C. Tìm phần tử nhỏ nhất (hoặc lớn nhất) trong mảng chưa được sắp xếp và đổi chỗ nó với phần tử ở vị trí i.**
+    * D. Chia mảng thành hai nửa và gọi đệ quy sắp xếp cho mỗi nửa.
+
+2.  **Độ phức tạp trong trường hợp tồi nhất (worst-case) của Selection Sort là gì?**
+    * A. tuyến tính
+    * B. n log n
+    * **C. bậc hai**
+    * D. hằng số
+
+3.  **Độ phức tạp trong trường hợp tốt nhất (Best-case) của Selection Sort là gì?**
+    * A. tuyến tính
+    * B. n log n
+    * **C. bậc hai**
+    * D. hằng số
+
+4.  **Đặc điểm nổi bật của Selection Sort mà là lợi thế của thuật toán này khi chi phí đổi chỗ (swap) là rất cao?**
+    * A. Là thuật toán sắp xếp ổn định (stable sort).
+    * **B. Số lần đổi chỗ (swap) ở mức tối thiểu (n-1 lần).**
+    * C. Đạt độ phức tạp tuyến tính trong trường hợp mảng gần sắp xếp (partially sorted).
+    * D. Sử dụng cấu trúc dữ liệu heap để tìm phần tử nhỏ nhất.
+
+5.  **Selection Sort có phải là thuật toán sắp xếp tại chỗ (in-place) không?**
+    * A. Không, vì nó cần một mảng phụ để lưu trữ các phần tử đã sắp xếp.
+    * B. Không, vì nó cần một ngăn xếp (stack) cho các lệnh gọi đệ quy.
+    * **C. Có, vì nó chỉ cần một lượng bộ nhớ phụ là hằng số.**
+    * D. Có, nhưng chỉ trong trường hợp tốt nhất khi nó chạy với thời gian tuyến tính.
+
+6.  **Selection Sort có phải là thuật toán sắp xếp ổn định (stable) không?**
+    * A. Có, vì nó chỉ thực hiện đổi chỗ khi cần thiết.
+    * **B. Không.**
+    * C. Chỉ ổn định trong trường hợp tốt nhất.
+    * D. Chỉ ổn định nếu mảng đã được sắp xếp.
+
+7.  **Selection Sort thực hiện bao nhiêu phép so sánh để sắp xếp một mảng n phần tử, bất kể dữ liệu đầu vào là gì?**
+    * A. ~n^2
+    * B. ~n \\log n
+    * **C. ~1/2 n^2**
+    * D. ~n
+
+8.  **Cho mảng A = [6, 4, 1, 8, 3]. Sau lần lặp đầu tiên của Selection Sort (sắp xếp tăng dần), mảng A sẽ trông như thế nào?**
+    * A. [4, 6, 1, 8, 3]
+    * **B. [1, 4, 6, 8, 3]**
+    * C. [6, 4, 1, 3, 8]
+    * D. [3, 4, 1, 8, 6]
+
+9.  **Ưu điểm chính của Selection Sort so với Insertion Sort là gì?**
+    * A. Nó là thuật toán ổn định.
+    * B. Độ phức tạp thời gian trung bình tốt hơn.
+    * **C. Số lần đổi chỗ (swap) luôn ở mức tối thiểu.**
+    * D. Nó hiệu quả hơn khi mảng đã gần được sắp xếp.
+
+10. **Thời gian chạy của Selection Sort trong trường hợp trung bình có bậc tăng loại nào?**
+    * A. n \\log n
+    * B. tuyến tính
+    * **C. bậc hai
+    * D. bậc ba
+
+---
+
+### Insertion Sort (Sắp xếp chèn)
+
+11. **Trong thuật toán Insertion Sort, ở mỗi lần lặp, một phần tử từ mảng chưa sắp xếp được chọn và làm gì?**
+    * A. Được đổi chỗ với phần tử nhỏ nhất tiếp theo trong mảng.
+    * B. Được đẩy vào cuối mảng đã sắp xếp.
+    * **C. Chèn vào vị trí thích hợp trong mảng con đã được sắp xếp trước đó.**
+    * D. Được sử dụng làm chốt (pivot) để chia mảng.
+
+12. **Độ phức tạp trong trường hợp tốt nhất  (Best-case) của Insertion Sort là gì?**
+    * A. n \\log n
+    * **B. tuyến tính
+    * C. bậc hai
+    * D. hằng số
+
+13. **Độ phức tạp trong trường hợp tồi nhất (Worst-case) của Insertion Sort là gì?**
+    * A. n \\log n
+    * B. tuyến tính
+    * **C. bậc hai
+    * D. bậc ba
+
+14. **Insertion Sort có phải là thuật toán sắp xếp ổn định (stable) không?**
+    * A. Không, vì thao tác chèn luôn làm thay đổi thứ tự tương đối.
+    * **B. Có.**
+    * C. Chỉ ổn định trong trường hợp xấu nhất.
+    * D. Chỉ ổn định nếu các phần tử đều có giá trị khác nhau.
+
+15. **Trong trường hợp xấu nhất của Insertion Sort, số lần dịch chuyển phần tử (shift) là bao nhiêu?**
+    * A. n \\log n
+    * B. tuyến tính
+    * **C. bậc hai
+    * D. bậc ba
+
+16. **Trong trường hợp mảng đầu vào gần như đã được sắp xếp, thuật toán nào sau đây sẽ hoạt động hiệu quả hơn?**
+    * A. Selection Sort
+    * **B. Insertion Sort**
+    * C. Cả hai đều là thuật toán có thời gian chạy bậc hai
+    * D. Không thể xác định
+
+17. **Cho mảng A = [6, 4, 1, 8, 3]. Sau khi kết thúc lần lặp i=2 của Insertion Sort (sắp xếp tăng dần, với i là chỉ số của phần tử đang được chèn, bắt đầu từ i=1), mảng A sẽ trông như thế nào?**
+    * A. [4, 6, 1, 8, 3]
+    * **B. [1, 4, 6, 8, 3]**
+    * C. [6, 4, 1, 8, 3]
+    * D. [4, 1, 6, 8, 3]
+
+18. **Ưu điểm chính của Insertion Sort so với Selection Sort là gì?**
+    * A. Nó là thuật toán không ổn định, cho phép tối ưu hóa không gian.
+    * B. Nó luôn có số lần đổi chỗ ít hơn Selection Sort.
+    * **C. Nó hiệu quả hơn khi mảng đã gần được sắp xếp.**
+    * D. Nó có độ phức tạp thời gian (n \\log n).
+
+19. **Thuật toán sắp xếp nào thường được sử dụng như một phần của các thuật toán sắp xếp hỗn hợp (hybrid sorting algorithms) như Timsort và Introsort cho các mảng con nhỏ?**
+    * A. Selection Sort
+    * **B. Insertion Sort**
+    * C. Quick Sort
+    * D. Merge Sort
+
+20. **Cả Selection Sort và Insertion Sort đều có đặc điểm chung nào sau đây?**
+    * A. Độ phức tạp thời gian trung bình là (n \\log n).
+    * B. Cả hai đều là thuật toán sắp xếp ổn định (stable).
+    * C. Cả hai đều có độ phức tạp thời gian tốt nhất là tuyến tính.
+    * **D. Cả hai đều là thuật toán sắp xếp tại chỗ (in-place) với bộ nhớ phụ là hằng số.**

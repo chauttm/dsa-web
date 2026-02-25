@@ -1,0 +1,147 @@
+trộn
+## 20 Câu Hỏi Trắc Nghiệm: Merge Sort và Quick Sort
+
+### Merge Sort
+
+1.  **Thuật toán Merge Sort hoạt động dựa trên chiến lược tổng quát nào?**
+    * A. Tham lam (Greedy)
+    * B. Quy hoạch động (Dynamic Programming)
+    * C. Quay lui (Backtracking)
+    * **D. Chia để trị (Divide and Conquer)**
+
+2.  **Trong Merge Sort, bước 'trộn' (Merge) được thực hiện với độ phức tạp thời gian loại nào đối với hai mảng con có tổng cộng N phần tử?**
+    * A. hằng số
+    * B. logarit
+    * C. N log N
+    * **D. tuyến tính**
+
+3.  **Độ phức tạp về thời gian chạy trong trường hợp tồi nhất (Worst-case) của Merge Sort thuộc loại nào?**
+    * A. tuyến tính
+    * B. bậc hai
+    * **C. n log n**
+    * D. logarit
+
+4.  **Nhược điểm chính của Merge Sort so với Quick Sort là gì?**
+    * A. Độ phức tạp thời gian xấu nhất là bậc hai.
+    * B. Nó là thuật toán không ổn định.
+    * **C. Nó yêu cầu không gian phụ tuyến tính để lưu trữ mảng tạm.**
+    * D. Độ phức tạp về bộ nhớ phụ (Space Complexity) là hằng số.
+
+5.  **Merge Sort có phải là thuật toán sắp xếp ổn định (stable) không?**
+    * A. Không, vì nó sử dụng kỹ thuật chia để trị.
+    * B. Không, vì các thao tác hợp nhất làm thay đổi thứ tự tương đối của các phần tử bằng nhau.
+    * **C. Có, nếu bước hợp nhất được thực hiện cẩn thận.**
+    * D. Chỉ ổn định trong trường hợp xấu nhất (n log n).
+
+6.  **Merge Sort được ưu tiên sử dụng hơn Quick Sort trong trường hợp nào?**
+    * A. Khi bộ nhớ là hạn chế và cần thuật toán sắp xếp tại chỗ.
+    * **B. Khi cần đảm bảo độ phức tạp thời gian n log n trong mọi trường hợp (bao gồm cả trường hợp xấu nhất).**
+    * C. Khi mảng đầu vào là các phần tử ngẫu nhiên.
+    * D. Khi mảng có kích thước rất lớn và không thể lưu toàn bộ dữ liệu cần sắp xếp trong bộ nhớ.
+
+7.  **Trong Merge Sort sắp xếp tăng dần mảng A = [8, 3, 1, 6, 9, 2, 5, 4]. Sau lần trộn (merge) đầu tiên (giữa hai mảng con độ dài 1), mảng con nào sau đây **không** thể là kết quả của một bước merge?**
+    * A. [3, 8]
+    * B. [2, 9]
+    * C. [4, 5]
+    * **D. [1, 8]** 
+
+8.  **Độ phức tạp về bộ nhớ phụ của Merge Sort phiên bản chuẩn thuộc loại nào?**
+    * A. hằng số
+    * **B. tuyến tính**
+    * C. logarit
+    * D. bậc hai
+
+### Quick Sort (Sắp xếp nhanh)
+
+9.  **Thuật toán Quick Sort hoạt động dựa trên kỹ thuật chính nào để sắp xếp một mảng con?**
+    * A. Tìm phần tử nhỏ nhất và đổi chỗ nó về vị trí đầu mảng con.
+    * **B. Chọn một phần tử chốt (pivot) và phân hoạch mảng thành hai mảng con.**
+    * C. Hợp nhất hai mảng con đã sắp xếp trước đó.
+    * D. Duyệt qua các cặp phần tử liền kề và đổi chỗ chúng.
+
+10. **Độ phức tạp thời gian trong trường hợp tồi nhất (Worst-case) của Quick Sort thuộc loại nào?**
+    * A. n log n
+    * B. tuyến tính
+    * **C. bậc hai**
+    * D. logarit
+
+11. **Độ phức tạp thời gian trung bình (Average-case) của Quick Sort thuộc loại nào?**
+    * A. bậc hai
+    * B. tuyến tính
+    * **C. n log n**
+    * D. logarit
+
+12. **Trường hợp xấu nhất về thời gian chạy của Quick Sort xảy ra khi nào?**
+    * A. Khi mảng đã được sắp xếp ngẫu nhiên.
+    * **B. Khi phần tử chốt luôn là phần tử lớn nhất hoặc nhỏ nhất.**
+    * C. Khi các phần tử trong mảng đều bằng nhau.
+    * D. Khi phần tử chốt luôn được chọn là phần tử trung vị (median).
+
+13. **Để tránh trường hợp xấu nhất của Quick Sort, một kỹ thuật phổ biến được sử dụng là gì?**
+    * A. Luôn chọn phần tử đầu tiên của mảng làm chốt (pivot).
+    * B. Giới hạn độ sâu đệ quy về log n.
+    * **C. Sử dụng kỹ thuật 'Chốt ngẫu nhiên' (Randomized Pivot) hoặc 'Trung vị của ba' (Median-of-three) để chọn chốt.**
+    * D. Sử dụng một mảng tạm thời để lưu trữ kết quả phân hoạch.
+
+14. **Quick Sort được coi là thuật toán sắp xếp tại chỗ (in-place) vì:**
+    * A. Nó sử dụng đệ quy.
+    * B. Độ phức tạp không gian cho ngăn xếp đệ quy là tuyến tính.
+    * **C. Mỗi bước phân hoạch thực hiện các thao tác đổi chỗ ngay tại mảng đầu vào và chỉ cần bộ nhớ phụ là hằng số.**
+    * D. Nó chỉ đòi hỏi bộ nhớ phụ là hằng số trong trường hợp tốt nhất về thời gian chạy.
+
+15. **Quick Sort có phải là thuật toán sắp xếp ổn định (stable) không?**
+    * A. Có, vì nó thực hiện các thao tác đổi chỗ cục bộ.
+    * **B. Không, vì thao tác phân hoạch có thể làm thay đổi thứ tự tương đối của các phần tử có giá trị bằng nhau.**
+    * C. Chỉ khi sử dụng kỹ thuật phân hoạch 3-way.
+    * D. Có, vì nó là thuật toán chia để trị.
+
+### So sánh chung
+
+16. **Điểm khác biệt cơ bản nhất giữa Merge Sort và Quick Sort là gì?**
+    * **A. Merge Sort thực hiện công việc chủ yếu ở bước trộn, Quick Sort thực hiện ở bước phân hoạch.**
+    * B. Merge Sort có độ phức tạp bậc hai, còn Quick Sort thuộc loại n log n.
+    * C. Merge Sort sử dụng đệ quy, còn Quick Sort không dùng đệ quy.
+    * D. Merge Sort là thuật toán không ổn định, còn Quick Sort là ổn định.
+
+17. **Cả Merge Sort và Quick Sort đều có đặc điểm chung nào sau đây?**
+    * A. Cả hai đều là thuật toán sắp xếp ổn định.
+    * B. Cả hai đều có bộ nhớ phụ là hằng số.
+    * **C. Cả hai đều dựa trên chiến lược Chia để trị (Divide and Conquer).**
+    * D. Cả hai đều có độ phức tạp thời gian trong trường hợp xấu nhất là bậc hai.
+
+??????????????????????
+18. **Trong thuật ngữ 'cache-friendliness' (thân thiện với bộ nhớ cache), Quick Sort thường được coi là hiệu quả hơn Merge Sort vì:**
+    * **A. Quick Sort thường truy cập các phần tử theo vị trí liền kề, tận dụng tốt hơn bộ nhớ cache.**
+    * B. Quick Sort ít sử dụng bộ nhớ phụ hơn (in-place).
+    * C. Merge Sort yêu cầu đệ quy nhiều hơn Quick Sort.
+    * D. Quick Sort luôn đạt O(n \\log n).
+
+??????????????????????
+19. **Một trong hai thuật toán dựa trên 'Chia để trị' này thường được sử dụng cho việc sắp xếp trên bộ nhớ ngoài (External Sorting). Đó là thuật toán nào?**
+    * A. Quick Sort
+    * **B. Merge Sort**
+    * C. Insertion Sort
+    * D. Heap Sort
+
+20. **Trong trường hợp tốt nhất, độ phức tạp không gian cho ngăn xếp đệ quy (recursive stack) của Quick Sort thuộc loại nào?**
+    * A. tuyến tính (n)
+    * **B. logarit (log n)**
+    * C. bậc hai (n^2)
+    * D. hằng số
+
+---
+
+### Đáp án (Tham khảo)
+
+| STT | Đáp án | STT | Đáp án |
+| :---: | :---: | :---: | :---: |
+| 1 | **D** | 11 | **C** |
+| 2 | **D** | 12 | **B** |
+| 3 | **C** | 13 | **C** |
+| 4 | **C** | 14 | **C** |
+| 5 | **C** | 15 | **B** |
+| 6 | **B** | 16 | **A** |
+| 7 | **D** | 17 | **C** |
+| 8 | **B** | 18 | **A** |
+| 9 | **B** | 19 | **B** |
+| 10 | **C** | 20 | **B** |

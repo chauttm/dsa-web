@@ -1,0 +1,91 @@
+## 10 Câu Hỏi Trắc Nghiệm: Tính Ổn Định (Stability) của Thuật Toán Sắp Xếp
+
+1.  **Định nghĩa chính xác nhất về một thuật toán sắp xếp ổn định (stable) là gì?**
+    * A. Thuật toán luôn đạt được độ phức tạp về thời gian chạy loại (n log n) trong mọi trường hợp.
+    * **B. Thuật toán giữ nguyên thứ tự tương đối ban đầu của các phần tử có khóa bằng nhau.**
+    * C. Thuật toán không bao giờ cần bộ nhớ phụ.
+    * D. Thuật toán đảm bảo số lần đổi chỗ (swap/exchange) là tối thiểu.
+
+2.  **Trong các thuật toán sắp xếp cơ bản, các thuật toán nào sau đây **KHÔNG** phải là thuật toán ổn định (unstable)?**
+    * A. Insertion Sort
+    * **B. Quick Sort
+    * C. Merge Sort
+    * **D. Selection Sort**
+
+3.  **Tại sao Quick Sort thường được coi là một thuật toán **KHÔNG ỔN ĐỊNH** (unstable)?**
+    * A. Vì độ phức tạp thời gian của nó trong trường hợp xấu nhất là $O(n^2)$.
+    * **B. Vì thao tác phân hoạch (partitioning) có thể đổi chỗ các phần tử có khóa bằng nhau, làm thay đổi thứ tự tương đối ban đầu của chúng.**
+    * C. Vì nó là một thuật toán sắp xếp sử dụng đệ quy.
+    * D. Vì nó sử dụng kỹ thuật chia để trị (Divide and Conquer).
+
+4.  **Merge Sort có phải là một thuật toán ổn định không?**
+    * A. Không, vì quá trình chia mảng làm mất thứ tự ban đầu.
+    * B. Không, vì nó cần một mảng phụ để lưu trữ dữ liệu.
+    * **C. Có, nếu trong quá trình hợp nhất (merge), các phần tử bằng nhau đến từ mảng con bên trái được ưu tiên.**
+    * D. Chỉ ổn định khi mảng đã được sắp xếp.
+
+5.  **Nếu bạn có danh sách các đối tượng với hai thuộc tính: `Tên` và `Tuổi`. 
+Bạn sắp xếp danh sách này hai lần: lần đầu theo `Tên` (tăng dần), lần hai theo `Tuổi` (tăng dần). 
+Nếu bạn muốn những người cùng `Tuổi` vẫn giữ nguyên thứ tự sắp xếp theo `Tên` ban đầu, 
+bạn phải sử dụng thuật toán sắp xếp nào trong lần sắp xếp thứ hai?**
+    * A. Selection Sort
+    * B. Quick Sort
+    * **C. Merge Sort**
+    * D. Heap Sort
+
+6.  **Thuật toán nào sau đây là thuật toán ổn định (stable) và có độ phức tạp thời gian tốt nhất $O(n)$ trong trường hợp mảng gần sắp xếp?**
+    * A. Quick Sort
+    * B. Merge Sort
+    * C. Selection Sort
+    * **D. Insertion Sort**
+
+7.  **Cần sử dụng thuật toán sắp xếp ổn định trong những trường hợp nào dưới đây?**
+    * **A. Sắp xếp các đối tượng dựa trên nhiều khóa (multi-key sorting).**
+    * B. Sắp xếp một mảng các số thực.
+    * C. Sắp xếp một mảng các số nguyên.
+    * D. Sắp xếp một mảng mà tất cả các phần tử đều có giá trị khác nhau.
+
+8.  **Heap Sort có phải là thuật toán ổn định không?**
+    * A. Có, vì nó được xây dựng trên cấu trúc dữ liệu Heap.
+    * B. Có, vì nó là thuật toán sắp xếp không cần mảng phụ.
+    * **C. Không, vì thao tác tạo heap (heapify) có thể làm thay đổi thứ tự tương đối của các phần tử trùng key.**
+    * D. Chỉ ổn định trong trường hợp xấu nhất.
+
+9.  **Giả sử mảng đầu vào là: $A = [ (5, 'a'), (3, 'b'), (5, 'c') ]$. 
+Sắp xếp mảng này theo giá trị số (tăng dần). 
+Kết quả nào trong danh sách sau đây là của một thuật toán **KHÔNG ỔN ĐỊNH** (Unstable Sort)?**
+    * A. $[ (3, 'b'), (5, 'a'), (5, 'c') ]$
+    * **B. $[ (3, 'b'), (5, 'c'), (5, 'a') ]$ **
+    * C. $[ (5, 'a'), (5, 'c'), (3, 'b') ]$    
+    * D. $[ (5, 'c'), (3, 'b'), (5, 'a') ]$    
+
+
+10. **Kết luận nào sau đây về tính ổn định của các thuật toán là **SAI**?**
+    * A. Selection Sort là thuật toán không ổn định.
+    * B. Insertion Sort là thuật toán ổn định.
+    * **C. Heap Sort là thuật toán ổn định vì nó được xây dựng trên một mảng.**
+    * D. Merge Sort là thuật toán ổn định (với điều kiện triển khai đúng).
+
+11.  **Một thuật toán sắp xếp được coi là "tại chỗ" (in-place) nếu độ phức tạp về bộ nhớ phụ của nó thuộc loại nào?**
+    * A. $O(n \log n)$
+    * B. $O(n)$
+    * **C. $O(log n)$**
+    * D. $O(n^2)$
+
+12.  **Trong 5 thuật toán dưới đây, thuật toán nào **KHÔNG** phải là thuật toán sắp xếp tại chỗ (non-in-place) theo phiên bản triển khai tiêu chuẩn?**
+    * A. Insertion Sort
+    * **B. Merge Sort**
+    * C. Heap Sort
+    * D. Selection Sort
+
+13.  **Tại sao Merge Sort (phiên bản tiêu chuẩn) lại được coi là thuật toán **KHÔNG** tại chỗ (non-in-place)?**
+    * A. Vì nó có độ phức tạp thời gian $O(n \log n)$.
+    * B. Vì nó là một thuật toán ổn định.
+    * **C. Vì nó cần một mảng phụ có kích thước n khi trộn các mảng con.**
+    * D. Vì nó sử dụng kỹ thuật đệ quy.
+
+14.  **Quick Sort thường được xem là tại chỗ (in-place). Tuy nhiên, độ sâu đệ quy (recursive stack space) của nó trong trường hợp xấu nhất như thế nào?**
+    * A. hằng số
+    * B. logarit
+    * **C. tuyến tính**
+    * D. bậc hai

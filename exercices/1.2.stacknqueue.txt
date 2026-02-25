@@ -1,0 +1,144 @@
+20 Câu Hỏi Trắc Nghiệm: Stack và Queue
+
+### I. Stack (Ngăn xếp)
+
+1. Nguyên lý hoạt động cơ bản của Stack (Ngăn xếp) là gì?
+    * A. FIFO (First-In, First-Out)
+    * **B. LIFO (Last-In, First-Out)**
+    * C. LILO (Last-In, Last-Out)
+    * D. FILO (First-In, Last-Out)
+
+2. Thao tác cơ bản nào được sử dụng để thêm một phần tử vào Stack?
+    * A. enqueue
+    * B. dequeue
+    * **C. push**
+    * D. insert
+
+3. Thao tác cơ bản nào được sử dụng để xóa và trả về phần tử trên cùng của Stack?
+    * A. peek
+    * **B. pop**
+    * C. dequeue
+    * D. remove
+
+4. Độ phức tạp thời gian của thao tác Push và Pop trên một Stack được triển khai bằng Mảng (Array) là bao nhiêu?
+    * A. tuyến tính (n)
+    * B. logarit (log n)
+    * **C. hằng số**
+    * D. bậc hai (n^2)
+
+5. Trong việc đánh giá các biểu thức số học, ví dụ chuyển đổi từ trung tố (toán tử nằm giữa hai toán hạng) sang hậu tố (toán tử nằm sau hai toán hạng), cấu trúc dữ liệu nào đóng vai trò chính?
+    * A. Queue
+    * B. Bảng băm
+    * **C. Stack**
+    * D. Danh sách liên kết
+
+6. Thao tác push trên Stack có chức năng gì?
+    * A. Xóa và trả về phần tử dưới cùng của Stack.
+    * B. Thêm một phần tử vào giữa Stack.
+    * **C. Thêm một phần tử lên đỉnh của Stack.**
+    * D. Xóa phần tử trên cùng của Stack.
+
+7. Một Stack được triển khai bằng danh sách liên kết (Linked List). Phần tử nào của danh sách liên kết được sử dụng làm đỉnh của Stack để đảm bảo thời gian chạy hằng số cho mỗi thao tác?
+    * A. Phần tử cuối cùng (Tail)
+    * **B. Phần tử đầu tiên (Head)**
+    * C. Phần tử nằm giữa
+    * D. Bất kỳ phần tử nào
+
+8. Ứng dụng nào sau đây KHÔNG phải là ứng dụng phổ biến của Stack?
+    * A. Quản lý các lời gọi hàm (function call stack) trong lập trình.
+    * **B. Xử lý các yêu cầu của máy in (Printer Spooling).**
+    * C. Kiểm tra sự cân bằng của dấu ngoặc trong biểu thức (Parenthesis Checking).
+    * D. Chức năng Undo/Redo trong các phần mềm.
+
+9. Giả sử bạn thực hiện chuỗi thao tác sau theo đúng thứ tự: Push(1), Push(2), Pop(), Push(3), Pop(), Push(4). Sau chuỗi thao tác đó, phần tử nào sẽ nằm tại đáy của stack?
+    * **A. 1**
+    * B. 3
+    * C. 2
+    * D. 4
+
+10. Giả sử bạn thực hiện chuỗi thao tác sau theo đúng thứ tự: Push(1), Push(2), Pop(), Push(3), Pop(), Push(4). Sau chuỗi thao tác đó, phần tử nào sẽ nằm tại đỉnh của stack?
+    * A. 1
+    * B. 3
+    * C. 2
+    * **D. 4**
+
+---
+
+### II. Queue (Hàng đợi)
+
+11. Nguyên lý hoạt động cơ bản của Queue (Hàng đợi) là gì?
+    * **A. FIFO (First-In, First-Out)**
+    * B. LIFO (Last-In, First-Out)
+    * C. FILO (First-In, Last-Out)
+    * D. LILO (Last-In, Last-Out)
+
+12. Thao tác nào được sử dụng để thêm một phần tử vào Queue?
+    * A. Push
+    * **B. Enqueue**
+    * C. Insert
+    * D. Add
+
+13. Thao tác nào được sử dụng để xóa và trả về phần tử ở phía trước (front) của Queue?
+    * A. Peek
+    * B. Pop
+    * **C. Dequeue**
+    * D. RemoveLast
+
+14. Trong cài đặt cấu trúc Queue, nếu dequeue() trả về phần tử ở đầu queue thì vị trí nào được được sử dụng để thêm các phần tử mới?
+    * A. Đầu
+    * **B. Cuối**
+    * C. Giữa
+    * D. Bất kỳ vị trí nào
+
+15. Độ phức tạp thời gian của thao tác Enqueue và Dequeue trên một Queue được triển khai bằng Danh sách Liên kết (Linked List) là bao nhiêu?
+    * A. tuyến tính (n)
+    * **B. hằng số**
+    * C. logarit (log n)
+    * D. bậc hai (n^2)
+
+16. Trong các thuật toán tìm kiếm trên đồ thị, cấu trúc dữ liệu nào đóng vai trò chính trong thuật toán BFS (Breadth-First Search - Tìm kiếm theo chiều rộng)?
+    * **A. Queue**
+    * B. Stack
+    * C. Priority Queue
+    * D. Hash Table
+
+17. Nếu một Queue được triển khai bằng mảng vòng (Circular Array), ưu điểm chính của nó so với Mảng tuyến tính (chốt đầu hoặc cuối queue tại một đầu mảng) là gì?
+    * A. Giảm độ phức tạp thời gian của Dequeue xuống hằng số.
+    * B. Tăng kích thước tối đa của Queue lên vô hạn.
+    * **C. Tận dụng tối đa không gian mảng đã cấp phát, tránh lãng phí khi các phần tử bị Dequeue.**
+    * D. Loại bỏ hoàn toàn khả năng xảy ra lỗi tràn mảng khi enqueue.
+
+18. Giả sử bạn thực hiện một chuỗi thao tác sau cho một queue rỗng: enqueue(A), enqueue(B), dequeue(), 
+enqueue(C). Hỏi sau chuỗi thao tác trên, dequeue() sẽ cho kết quả gì?
+    * A. A
+    * **B. B**
+    * C. C
+    * D. Không có phần tử nào
+
+19. Một Queue rỗng được triển khai bằng mảng vòng (circular array). Nếu front và rear là các chỉ số đại diện cho đầu và cuối hàng đợi, điều kiện nào sau đây thường được sử dụng để kiểm tra xem Queue đã đầy (Full) chưa? (Với MAX_SIZE là kích thước mảng)
+    * A. front == -1
+    * B. rear == MAX_SIZE
+    * **C. (rear + 1) % MAX_SIZE == front**
+    * D. front == rear
+
+20. Cấu trúc dữ liệu nào thường được sử dụng để mô hình hóa các tình huống yêu cầu phân bổ tài nguyên theo thứ tự đến trước, phục vụ trước?
+    * A. Stack
+    * **B. Queue**
+    * C. Cây
+    * D. Đồ thị
+
+---
+**Đáp án (Tham khảo)**
+
+| STT | Đáp án | STT | Đáp án |
+| :---: | :---: | :---: | :---: |
+| 1 | B | 11 | A |
+| 2 | C | 12 | B |
+| 3 | B | 13 | C |
+| 4 | C | 14 | B |
+| 5 | C | 15 | B |
+| 6 | C | 16 | A |
+| 7 | B | 17 | C |
+| 8 | B | 18 | B |
+| 9 | A | 19 | C |
+| 10 | D | 20 | B |

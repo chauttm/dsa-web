@@ -1,0 +1,23 @@
+Tại sao nên học Cấu trúc dữ liệu và giải Thuật
+
+Được dùng AI chatbot cho những việc gì
+
+Trao đổi/hỏi giáo viên ở đâu?
+
+Môi trường lập trình được khuyên dùng là môi trường nào?
+- IntelliJ Ultimate bản mới nhất
+- IntelliJ Community bản mới nhất
+- LIFT installer chuyên dụng cho sách Algorithms 4th
+- VSCode
+
+Với điều kiện nào thì bạn có thể dùng môi trường không khuyên dùng
+- Thành thạo việc cài đặt và thiết lập môi trường thư viện
+- Thạo việc dùng terminal
+- Không ngại gặp lỗi setup
+- Tất cả những điều trên
+
+Nội dung gì có thể nằm trong bài thi cuối kì và giữa kì
+- Nội dung lý thuyết đã học
+- Các bài tập đã giao
+- Bài tập chưa giao
+- Tất cả các nội dung trên

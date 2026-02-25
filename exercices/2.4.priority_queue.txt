@@ -1,0 +1,78 @@
+Quiz title: Priority Queue
+
+Title: 1
+1. Hàng đợi Ưu tiên (Priority Queue - PQ) khác biệt cơ bản với Hàng đợi (Queue) thông thường ở điểm nào?
+a) PQ cho phép truy cập ngẫu nhiên vào bất kỳ phần tử nào.
+b) PQ cho phép thêm phần tử vào cả đầu và cuối.
+*c) Phần tử được lấy ra khỏi PQ dựa trên giá trị ưu tiên (priority), không phải theo thứ tự FIFO (Vào trước, Ra trước).
+d) PQ chỉ lưu trữ các số nguyên.
+
+Title: 2
+2. Cấu trúc dữ liệu nào được sử dụng phổ biến và hiệu quả nhất để triển khai một Hàng đợi Ưu tiên, đảm bảo các thao tác cơ bản có độ phức tạp thời gian tốt nhất?
+a) Danh sách liên kết đơn (Singly Linked List)
+b) Cây tìm kiếm nhị phân (Binary Search Tree)
+*c) Heap cài bằng mảng
+d) Mảng động sắp xếp tăng dần
+
+Title: 3
+3. Trong một Max-Heap, phần tử có key lớn nhất luôn được đặt ở đâu?
+a) Một trong các nút lá.
+*b) Ở gốc (root) của Heap.
+c) Ở nút con cuối cùng bên phải.
+d) Ở bất kỳ nút nào có giá trị lớn hơn cha của nó.
+
+Title: 4
+4. Trong một Min-Heap, phần tử có key lớn nhất luôn được đặt ở đâu?
+*a) Một trong các nút lá.
+b) Ở gốc (root) của Heap.
+c) Ở nút con cuối cùng bên phải.
+d) Ở bất kỳ nút nào có giá trị lớn hơn cha của nó.
+
+Title: 5
+5. Độ phức tạp thời gian của thao tác chèn phần tử mới (`Insert`) vào một Heap chứa n phần tử là bao nhiêu?
+a) hằng số
+b) tuyến tính
+*c) logarit
+d) n log n
+
+Title: 6
+6. Độ phức tạp thời gian của thao tác lấy và xóa phần tử có độ ưu tiên cao nhất (`Del-Max` hoặc `Del-Min`) từ một Hàng đợi Ưu tiên chứa n phần tử là bao nhiêu?
+a) hằng số
+b) tuyến tính
+*c) logarit
+d) bậc hai
+
+Title: 7
+7. Thao tác nào sau đây là **KHÔNG** phải là thao tác cơ bản (hoặc không hiệu quả) trên một Hàng đợi Ưu tiên?
+a) Lấy phần tử ưu tiên cao nhất (`Peek`).
+b) Chèn một phần tử mới (`Insert`).
+*c) Tìm kiếm và trả về một phần tử bất kỳ có khóa là K (`Search`).
+d) Cập nhật ưu tiên của một phần tử (`Decrease/Increase Key`).
+
+Title: 8
+8. Xét cài đặt Min-Heap, điều kiện Heap (hay thứ tự heap) cần thỏa mãn là gì?
+*a) Giá trị của một nút luôn nhỏ hơn hoặc bằng giá trị của các nút con của nó.
+b) Giá trị của một nút luôn lớn hơn hoặc bằng giá trị của các nút con của nó.
+c) Cây luôn là Cây tìm kiếm nhị phân.
+d) Tất cả các nút lá phải ở cùng một tầng.
+
+Title: 9
+9. Xét cài đặt Max-Heap với đỉnh heap đặt tại phần tử chỉ số 0, chỉ số của nút con bên trái (left child) của một nút tại chỉ số i là gì?
+a) i + 1
+b) 2i
+*c) 2i + 1
+d) (i - 1) / 2
+
+Title: 10
+10. Lợi thế lớn nhất của việc sử dụng Priority Queue so với sắp xếp toàn bộ mảng đầu vào để tìm ra k phần tử lớn nhất/nhỏ nhất là gì?
+a) PQ luôn sử dụng bộ nhớ O(1).
+*b) PQ cho phép tìm kiếm k phần tử mà chỉ cần độ phức tạp thời gian n log k, hiệu quả hơn sắp xếp n log n khi k nhỏ.
+c) PQ là một thuật toán sắp xếp ổn định.
+d) PQ chỉ có thể lưu trữ k phần tử, làm giảm chi phí lưu trữ.
+
+Title: 11
+11. Nếu muốn dùng hàng đợi ưu tiên để lấy top k phần tử lớn nhất của một chuỗi n phần tử, hàng đợi đó cần có kích thước bao nhiêu?
+a) n.
+*b) k.
+c) log n.
+d) log k.
