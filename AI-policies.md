@@ -9,7 +9,7 @@ Giá trị của người có kiến thức về Cấu trúc dữ liệu và gi�
 
 Với tinh thần đó, chính sách của lớp học như sau:
 
-* **Vi phạm quy tắc liêm chính học thuật (Honor Code):** Việc sao chép và dán kết quả từ LLM vào bài tập về nhà là vi phạm quy tắc liêm chính, tương tự như việc sao chép bài làm của nhóm khác. Mọi nội dung bạn nộp phải được viết bằng ngôn ngữ của chính nhóm bạn.
+* **Vi phạm quy tắc liêm chính học thuật (Honor Code):** Việc sao chép và dán kết quả từ LLM vào bài tập về nhà mà không hiểu nội dung là vi phạm quy tắc liêm chính, tương tự như việc sao chép bài làm của người khác.
 * **Ngoại lệ:** Bạn được phép sử dụng LLM để chỉnh sửa cú pháp và từ ngữ trong các bài tập (ngay cả khi việc đó bao gồm sao chép và dán kết quả từ LLM), miễn là nó không tạo ra hoặc thay đổi nội dung cốt lõi trong lời giải của bạn.
 
 Việc sử dụng LLM để hỗ trợ lên ý tưởng (brainstorm) cho bài tập về nhà là được phép. Tuy nhiên, chúng tôi khuyến khích bạn hãy cân nhắc kỹ khi sử dụng và dùng chúng theo cách hỗ trợ tốt nhất cho việc học. Các phương pháp tối ưu bao gồm:
